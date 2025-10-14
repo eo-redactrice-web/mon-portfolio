@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rédactrice Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a2332;
+            background-color: #f8f6f3;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e8e4dc;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1a2332;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #5a6b7f;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            box-shadow: 0 2px 8px rgba(26, 35, 50, 0.08);
+        }
+
+        .about h2 {
+            color: #1a2332;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .about p {
+            color: #4a5568;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .portfolio-section h2 {
+            color: #1a2332;
+            margin-bottom: 40px;
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .articles-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .article-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 35px;
+            box-shadow: 0 2px 8px rgba(26, 35, 50, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(26, 35, 50, 0.15);
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: #e8e4dc;
+            color: #1a2332;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .tag.client {
+            background-color: #1a2332;
+            color: white;
+        }
+
+        .article-card h3 {
+            color: #1a2332;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .article-card p {
+            color: #5a6b7f;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e4dc;
+        }
+
+        .date {
+            color: #8a95a5;
+            font-size: 0.9rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #1a2332;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 24px;
+            border: 2px solid #1a2332;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: #1a2332;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid #e8e4dc;
+            color: #8a95a5;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 32px;
+            background-color: #1a2332;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #2a3442;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .about, .article-card {
+                padding: 25px;
+            }
+
+            .article-footer {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Votre Nom</h1>
+            <p class="tagline">Rédactrice Web Spécialisée en Articles de Blog</p>
+        </header>
+
+        <section class="about">
+            <h2>À propos</h2>
+            <p>
+                Passionnée par l'écriture et le marketing de contenu, j'accompagne les entreprises dans leur stratégie éditoriale en créant des articles de blog optimisés SEO, engageants et adaptés à leur audience. Mon objectif : transformer vos idées en contenus qui captivent vos lecteurs et renforcent votre présence en ligne.
+            </p>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>Mes Réalisations</h2>
+            <div class="articles-grid">
+                
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="tag client">Client exemple</span>
+                        <span class="tag">Marketing Digital</span>
+                    </div>
+                    <h3>Les Clés d'une Stratégie de Contenu Réussie en 2025</h3>
+                    <p>
+                        Découvrez comment élaborer une stratégie de contenu performante qui attire et fidélise votre audience. De l'analyse des personas à la création de contenus à forte valeur ajoutée, cet article vous guide pas à pas.
+                    </p>
+                    <div class="article-footer">
+                        <span class="date">Janvier 2025</span>
+                        <a href="#" class="read-more">Lire l'article</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="tag client">Client exemple</span>
+                        <span class="tag">SEO</span>
+                    </div>
+                    <h3>Optimiser son Référencement Naturel : Guide Complet</h3>
+                    <p>
+                        Le SEO évolue constamment. Apprenez les meilleures pratiques pour améliorer la visibilité de votre site web sur les moteurs de recherche et générer du trafic qualifié vers vos contenus.
+                    </p>
+                    <div class="article-footer">
+                        <span class="date">Décembre 2024</span>
+                        <a href="#" class="read-more">Lire l'article</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="tag client">Client exemple</span>
+                        <span class="tag">Entrepreneuriat</span>
+                    </div>
+                    <h3>Comment Lancer son Blog Professionnel : Les Étapes Essentielles</h3>
+                    <p>
+                        Un blog professionnel bien conçu est un atout majeur pour votre activité. De la définition de votre ligne éditoriale au choix de votre plateforme, découvrez comment démarrer efficacement.
+                    </p>
+                    <div class="article-footer">
+                        <span class="date">Novembre 2024</span>
+                        <a href="#" class="read-more">Lire l'article</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="tag client">Client exemple</span>
+                        <span class="tag">Rédaction Web</span>
+                    </div>
+                    <h3>L'Art de Captiver ses Lecteurs : Techniques de Storytelling</h3>
+                    <p>
+                        Le storytelling transforme un simple article en une expérience mémorable. Explorez les techniques narratives qui donnent vie à vos contenus et créent une connexion authentique avec vos lecteurs.
+                    </p>
+                    <div class="article-footer">
+                        <span class="date">Octobre 2024</span>
+                        <a href="#" class="read-more">Lire l'article</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>Intéressé(e) par mes services de rédaction ?</p>
+            <a href="https://www.linkedin.com/in/votre-profil" class="contact-btn">Me contacter sur LinkedIn</a>
+            <p style="margin-top: 30px; font-size: 0.9rem;">© 2025 - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>
