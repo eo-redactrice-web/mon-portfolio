@@ -1,293 +1,199 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Rédactrice Web</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emmanuelle Ouine — Rédactrice Web SEO | Portfolio</title>
+  <meta name="description" content="Rédactrice web SEO freelance : articles optimisés, pages de site, optimisation on‑page. Découvrez 3 cas concrets et mes services." />
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Emmanuelle Ouine — Rédactrice Web SEO" />
+  <meta property="og:description" content="Articles SEO, optimisation on‑page, pages de site. 3 réalisations client." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    :root{
+      --bg:#0a0e27; --panel:#161b36; --panel-2:#1a1f3a; --primary:#2563eb; --primary-2:#3b82f6; --text:#e5e7eb; --muted:#9ca3af; --border:#1e3a8a; --glow: 0 8px 24px rgba(37,99,235,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; line-height:1.6; color:var(--text); background:radial-gradient(1200px 800px at 10% 0%, #0e1440 0%, var(--bg) 55%);}    
+    a{color:var(--text)}
+    .container{max-width:1120px; margin-inline:auto; padding:64px 20px}
+    .site-header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding-bottom:28px; border-bottom:2px solid var(--border); margin-bottom:40px}
+    .brand{display:flex; flex-direction:column}
+    .brand h1{margin:0; font-size:clamp(1.5rem,2.5vw,2rem); font-weight:700}
+    .brand .tagline{margin:2px 0 0; color:var(--muted)}
+    nav ul{list-style:none; display:flex; gap:16px; padding:0; margin:0; flex-wrap:wrap}
+    nav a{display:inline-block; padding:10px 14px; border:1px solid var(--border); border-radius:8px; text-decoration:none; color:var(--text)}
+    nav a:hover{border-color:var(--primary); box-shadow:var(--glow)}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #e5e7eb;
-            background-color: #0a0e27;
-        }
+    .skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip-link:focus{position:static; width:auto; height:auto; padding:8px 12px; background:#111827; border:2px solid var(--primary); border-radius:8px}
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
+    .hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; align-items:center; margin-bottom:40px}
+    .hero .panel{background:var(--panel); border:1px solid var(--primary); border-radius:14px; padding:28px; box-shadow:0 4px 16px rgba(30,58,138,.22)}
+    .hero h2{font-size:clamp(1.6rem,3.8vw,2.4rem); margin:0 0 10px}
+    .hero p{color:#d1d5db; margin:0 0 18px}
+    .cta{display:inline-block; text-decoration:none; background:var(--primary); color:#fff; padding:12px 18px; border-radius:10px; border:2px solid var(--primary); font-weight:600}
+    .cta:hover{background:var(--primary-2); border-color:var(--primary-2)}
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-            padding-bottom: 40px;
-            border-bottom: 2px solid #1e3a8a;
-        }
+    .about{background:var(--panel-2); border:1px solid var(--primary); border-radius:12px; padding:28px; margin-bottom:48px; box-shadow:0 4px 16px rgba(30,58,138,.2)}
+    .about h2{margin:0 0 12px}
 
-        h1 {
-            font-size: 2.5rem;
-            color: #ffffff;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
+    .section-title{display:flex; align-items:center; justify-content:center; gap:10px; margin:18px 0 26px}
+    .section-title h2{font-size:1.8rem; margin:0}
 
-        .tagline {
-            font-size: 1.2rem;
-            color: #9ca3af;
-            margin-bottom: 30px;
-        }
+    .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
+    .card{background:var(--panel-2); border:1px solid var(--primary); border-radius:14px; padding:24px; box-shadow:0 4px 16px rgba(30,58,138,.18); display:flex; flex-direction:column; min-height:280px}
+    .card:hover{transform:translateY(-3px); box-shadow: var(--glow); transition:transform .3s ease, box-shadow .3s ease}
+    .meta{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px}
+    .tag{display:inline-block; padding:6px 10px; background:#1e3a8a; color:#e5e7eb; border-radius:999px; font-size:.8rem; border:1px solid var(--border)}
+    .tag.client{background:var(--primary); color:#fff}
+    .badge-note{background:#0b3cbd}
+    .card h3{margin:6px 0 10px; font-size:1.25rem}
+    .card p{color:#d1d5db; margin:0 0 14px}
+    .card .foot{margin-top:auto; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--primary); padding-top:14px}
+    .date{color:var(--muted); font-size:.9rem}
+    .btn-link{display:inline-block; color:#fff; text-decoration:none; font-weight:600; padding:10px 16px; border:2px solid var(--primary); border-radius:10px}
+    .btn-link:hover{background:var(--primary); box-shadow:var(--glow)}
 
-        .about {
-            background-color: #1a1f3a;
-            padding: 40px;
-            border-radius: 8px;
-            margin-bottom: 60px;
-            box-shadow: 0 4px 16px rgba(30, 58, 138, 0.2);
-            border: 1px solid #2563eb;
-        }
+    .services{margin-top:50px}
+    .service{padding:22px; border:1px dashed var(--border); border-radius:12px; background:linear-gradient(180deg, rgba(37,99,235,.08), transparent); min-height:200px}
+    .service h3{margin:0 0 6px}
+    .service p{margin:0; color:#cbd5e1}
 
-        .about h2 {
-            color: #ffffff;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
+    footer{margin-top:56px; padding-top:32px; border-top:2px solid var(--border); text-align:center; color:var(--muted)}
+    .contact-btn{display:inline-block; margin-top:14px; padding:12px 22px; background:var(--primary); color:#fff; border-radius:10px; text-decoration:none; font-weight:600}
+    .contact-btn:hover{background:var(--primary-2)}
 
-        .about p {
-            color: #d1d5db;
-            font-size: 1.05rem;
-            line-height: 1.8;
-        }
-
-        .portfolio-section h2 {
-            color: #ffffff;
-            margin-bottom: 40px;
-            font-size: 1.8rem;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .articles-grid {
-            display: grid;
-            gap: 30px;
-        }
-
-        .article-card {
-            background-color: #1a1f3a;
-            border-radius: 8px;
-            padding: 35px;
-            box-shadow: 0 4px 16px rgba(30, 58, 138, 0.2);
-            border: 1px solid #2563eb;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .article-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
-            border-color: #3b82f6;
-        }
-
-        .article-meta {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 6px 14px;
-            background-color: #1e3a8a;
-            color: #e5e7eb;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        .tag.client {
-            background-color: #2563eb;
-            color: white;
-        }
-
-        .article-card h3 {
-            color: #ffffff;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .article-card p {
-            color: #d1d5db;
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-
-        .article-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #2563eb;
-        }
-
-        .date {
-            color: #9ca3af;
-            font-size: 0.9rem;
-        }
-
-        .read-more {
-            display: inline-block;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 10px 24px;
-            border: 2px solid #2563eb;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            background-color: transparent;
-        }
-
-        .read-more:hover {
-            background-color: #2563eb;
-            color: white;
-            border-color: #3b82f6;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 2px solid #1e3a8a;
-            color: #9ca3af;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 32px;
-            background-color: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            background-color: #3b82f6;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .about, .article-card {
-                padding: 25px;
-            }
-
-            .article-footer {
-                flex-direction: column;
-                gap: 15px;
-                align-items: flex-start;
-            }
-        }
-    </style>
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns: 1fr 1fr}
+    }
+    @media (max-width: 680px){
+      .grid{grid-template-columns: 1fr}
+      nav{width:100%}
+      nav ul{justify-content:space-between}
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Emmanuelle Ouine</h1>
-            <p class="tagline">Rédactrice Web</p>
-        </header>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <div class="container">
+    <header class="site-header" role="banner">
+      <div class="brand">
+        <h1>Emmanuelle Ouine</h1>
+        <p class="tagline">Rédactrice web SEO</p>
+      </div>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <section class="about">
-            <h2>À propos</h2>
-            <p>
-               Je suis rédactrice web SEO freelance.
-J'aide les entrepreneurs, indépendants et passionnés à gagner en visibilité grâce à des contenus clairs, structurés et agréables à lire.
-Voici un aperçu de mes réalisations : des articles rédigés pour des clients aux univers variés, avec le même souci de justesse et de qualité.
-            </p>
-        </section>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="panel">
+        <h2 id="hero-title">Des contenus clairs, optimisés et agréables à lire</h2>
+        <p>J’accompagne entrepreneurs et PME à gagner en visibilité grâce à des articles SEO, des pages web efficaces et une optimisation on‑page pragmatique.</p>
+        <a class="cta" href="#contact">Discuter de votre projet</a>
+      </div>
+      <div class="panel" aria-label="Points forts">
+        <ul>
+          <li><strong>SEO utile</strong> : structure, intention de recherche, maillage.</li>
+          <li><strong>Tonalité juste</strong> : claire, professionnelle, accessible.</li>
+          <li><strong>Livrables propres</strong> : briefs, sources, et suggestions titres/meta.</li>
+        </ul>
+      </div>
+    </section>
 
-        <section class="portfolio-section">
-            <h2>Mes Réalisations</h2>
-            <div class="articles-grid">
-                
-                <article class="article-card">
-                    <div class="article-meta">
-                        <span class="tag client">Deviation Records</span>
-                    </div>
-                    <h3>5 étapes pour réussir son mastering audio</h3>
-                    <p>
-                       Ce guide en cinq étapes accompagne les musiciens dans l'ultime phase du mastering : préparer, ajuster, exporter et valider un morceau prêt à diffuser.
-                    </p>
-                    <div class="article-footer">
-                        <span class="date">Juillet 2025</span>
-                        <a href="https://www.deviation-records.com/2025/08/13/5-etapes-mastering-audio/" class="read-more" target="_blank">Lire l'article</a>
-                    </div>
-                </article>
+    <main id="main">
+      <section class="about" aria-labelledby="about-title">
+        <h2 id="about-title">À propos</h2>
+        <p>Je suis rédactrice web SEO freelance. J’aide les indépendants et petites entreprises à renforcer leur présence en ligne avec des contenus précis, structurés et pensés pour leurs lecteurs. Ci‑dessous, trois exemples concrets rédigés pour des clients aux univers variés.</p>
+      </section>
 
-                <article class="article-card">
-                    <div class="article-meta">
-                        <span class="tag client">Business Aptitude</span>
-                    </div>
-                    <h3>Erreur 504 : Diagnostic et solutions pour la résoudre</h3>
-                    <p>
-                       Un article pédagogique qui explique les causes, impacts et solutions de l'erreur 504. Un contenu technique et clair, pensé pour rendre accessible un sujet souvent complexe.
-                    </p>
-                    <div class="article-footer">
-                        <span class="date">Décembre 2024</span>
-                        <a href="https://www.business-aptitude.com/erreur-504/" class="read-more" target="_blank">Lire l'article</a>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-meta">
-                        <span class="tag client">Client exemple</span>
-                        <span class="tag">Entrepreneuriat</span>
-                    </div>
-                    <h3>Comment Lancer son Blog Professionnel : Les Étapes Essentielles</h3>
-                    <p>
-                        Un blog professionnel bien conçu est un atout majeur pour votre activité. De la définition de votre ligne éditoriale au choix de votre plateforme, découvrez comment démarrer efficacement.
-                    </p>
-                    <div class="article-footer">
-                        <span class="date">Novembre 2024</span>
-                        <a href="#" class="read-more">Lire l'article</a>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <div class="article-meta">
-                        <span class="tag client">Client exemple</span>
-                        <span class="tag">Rédaction Web</span>
-                    </div>
-                    <h3>L'Art de Captiver ses Lecteurs : Techniques de Storytelling</h3>
-                    <p>
-                        Le storytelling transforme un simple article en une expérience mémorable. Explorez les techniques narratives qui donnent vie à vos contenus et créent une connexion authentique avec vos lecteurs.
-                    </p>
-                    <div class="article-footer">
-                        <span class="date">Octobre 2024</span>
-                        <a href="#" class="read-more">Lire l'article</a>
-                    </div>
-                </article>
-
+      <section id="realisations" class="portfolio-section" aria-labelledby="work-title">
+        <div class="section-title"><h2 id="work-title">Mes réalisations</h2></div>
+        <div class="grid">
+          <!-- 1. Mastering audio -->
+          <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="meta">
+              <span class="tag client">Deviation Records</span>
+              <span class="tag">Musique</span>
             </div>
-        </section>
+            <h3 itemprop="name">5 étapes pour réussir son mastering audio</h3>
+            <p itemprop="description">Guide pratique pour finaliser un morceau prêt à diffuser : préparation, ajustements, export et validation.</p>
+            <div class="foot">
+              <span class="date">2025</span>
+              <a class="btn-link" href="https://www.deviation-records.com/2025/08/13/5-etapes-mastering-audio/" target="_blank" rel="noopener">Lire l’article</a>
+            </div>
+          </article>
 
-        <footer>
-            <p>Envie de collaborer ?</p>
-            <a href="mailto:e.o.redactriceweb@gmail.com" class="contact-btn">Me contacter</a>
-            <p style="margin-top: 30px; font-size: 0.9rem;">© 2025 - Tous droits réservés</p>
-        </footer>
-    </div>
+          <!-- 2. Erreur 504 (note d’intégration) -->
+          <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="meta">
+              <span class="tag client">Business Aptitude</span>
+              <span class="tag badge-note" title="Texte rédigé par moi, mis en page par le client">Contenu rédigé — Intégration client</span>
+              <span class="tag">Technique</span>
+            </div>
+            <h3 itemprop="name">Erreur 504 : diagnostic et solutions</h3>
+            <p itemprop="description">Un article pédagogique qui explique les causes, impacts et résolutions d’une erreur 504, avec conseils actionnables.</p>
+            <div class="foot">
+              <span class="date">2024</span>
+              <a class="btn-link" href="https://www.business-aptitude.com/erreur-504/" target="_blank" rel="noopener">Lire l’article</a>
+            </div>
+          </article>
+
+          <!-- 3. Détectives Saint‑Tropez (note d’intégration) -->
+          <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="meta">
+              <span class="tag client">A‑Stratégie</span>
+              <span class="tag badge-note" title="Texte rédigé par moi, mis en page par le client">Contenu rédigé — Intégration client</span>
+              <span class="tag">Services</span>
+            </div>
+            <h3 itemprop="name">Détectives privés à Saint‑Tropez : missions & cadre légal</h3>
+            <p itemprop="description">Présentation claire des prestations d’enquête et rappels légaux pour les particuliers et professionnels.</p>
+            <div class="foot">
+              <span class="date">2025</span>
+              <a class="btn-link" href="https://www.astrategie.com/nos-agences/agence-detectives-st-tropez/" target="_blank" rel="noopener">Lire l’article</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="services" aria-labelledby="services-title">
+        <div class="section-title"><h2 id="services-title">Services proposés</h2></div>
+        <div class="grid">
+          <div class="service">
+            <h3>Articles SEO complets</h3>
+            <p>Recherche d’intention, plan structuré Hn, sources fiables, suggestions de maillage interne et métadonnées (title/description).</p>
+          </div>
+          <div class="service">
+            <h3>Pages de site efficaces</h3>
+            <p>Pages Services / À propos / FAQ : claires, orientées conversion, avec micro‑copies et appels à l’action pertinents.</p>
+          </div>
+          <div class="service">
+            <h3>Optimisation on‑page</h3>
+            <p>Réécriture, enrichissement sémantique, liens internes, amélioration lisibilité, check technique léger (performances et balisage).</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="about" aria-labelledby="contact-title" style="margin-top:50px">
+        <h2 id="contact-title">Parlons de votre contenu</h2>
+        <p>Un besoin précis ou un audit éditorial rapide ? Je réponds sous 24h ouvrées.</p>
+        <p><a class="contact-btn" href="mailto:e.o.redactriceweb@gmail.com">Me contacter</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 — Emmanuelle Ouine. Tous droits réservés.</p>
+      <p style="margin-top:8px">Portfolio statique — GitHub Pages</p>
+    </footer>
+  </div>
 </body>
 </html>
