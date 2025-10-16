@@ -4,27 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Emmanuelle Ouine — Rédactrice Web SEO | Portfolio</title>
-  <meta name="description" content="Rédactrice web SEO freelance : articles optimisés, pages de site, optimisation on-page. Découvrez mes réalisations et mes services." />
+  <meta name="description" content="Rédactrice web SEO freelance : articles optimisés, pages de site, optimisation on‑page. Découvrez mes réalisations et mes services." />
   <meta name="color-scheme" content="dark light">
   <meta property="og:title" content="Emmanuelle Ouine — Rédactrice Web SEO" />
-  <meta property="og:description" content="Articles SEO, optimisation on-page, pages de site. 6 réalisations client." />
+  <meta property="og:description" content="Articles SEO, optimisation on‑page, pages de site. 6 réalisations client." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <style>
     :root{
-      --bg:#0a0e27; --panel:#161b36; --panel-2:#1a1f3a; --primary:#2563eb; --primary-2:#3b82f6; --text:#e5e7eb; --muted:#9ca3af; --border:#1e3a8a; --glow: 0 8px 24px rgba(37,99,235,.25);
+      /* Thème clair provisoire — sera ajusté d'après la vignette LinkedIn */
+      --bg:#f9f8f5;          /* fond clair chaud */
+      --panel:#ffffff;       /* cartes/panels */
+      --panel-2:#ffffff;
+      --primary:#0a0e27;     /* bleu nuit (texte/boutons) */
+      --primary-2:#1f2a44;
+      --text:#0a0e27;        /* texte par défaut */
+      --muted:#4b5563;       /* texte secondaire */
+      --border:#e5e7eb;      /* bordures claires */
+      --glow: 0 8px 24px rgba(10,14,39,.08);
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
+    html,body{
       margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       line-height:1.6; color:var(--text);
-      background:radial-gradient(1200px 800px at 10% 0%, #0e1440 0%, var(--bg) 55%);
+      background: radial-gradient(1200px 800px at 10% 0%, #ffffff 0%, var(--bg) 60%);
     }
+    body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; line-height:1.6; color:var(--text); background:radial-gradient(1200px 800px at 10% 0%, #0e1440 0%, var(--bg) 55%);}    
     a{color:var(--text)}
     .container{max-width:1120px; margin-inline:auto; padding:64px 20px}
-    .site-header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding-bottom:28px; border-bottom:2px solid var(--border); margin-bottom:40px}
+    .site-header{display:flex; align-items:center; justify-content:space-between; gap:18px; padding-bottom:28px; border-bottom:2px solid var(--border); margin-bottom:40px; background-color:transparent}
     .brand{display:flex; flex-direction:column}
     .brand h1{margin:0; font-size:clamp(1.5rem,2.5vw,2rem); font-weight:700}
     .brand .tagline{margin:2px 0 0; color:var(--muted)}
@@ -54,23 +63,13 @@
     .meta{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px}
     .tag{display:inline-block; padding:6px 10px; background:#1e3a8a; color:#e5e7eb; border-radius:999px; font-size:.8rem; border:1px solid var(--border)}
     .tag.client{background:var(--primary); color:#fff}
+    .badge-note{background:#0b3cbd}
     .card h3{margin:6px 0 10px; font-size:1.25rem}
     .card p{color:#d1d5db; margin:0 0 14px}
-    .card .foot{
-      margin-top:auto; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--primary); padding-top:14px
-    }
-    .foot-left{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .card .foot{margin-top:auto; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--primary); padding-top:14px}
     .date{color:var(--muted); font-size:.9rem}
     .btn-link{display:inline-block; color:#fff; text-decoration:none; font-weight:600; padding:10px 16px; border:2px solid var(--primary); border-radius:10px}
     .btn-link:hover{background:var(--primary); box-shadow:var(--glow)}
-
-    /* Note sous les articles — “Contenu intégré par le client.” */
-    .note-client{
-      font-size:0.8rem;
-      color:#cbd5e1;           /* gris clair lisible sur fond foncé */
-      font-style:italic;
-      opacity:1;
-    }
 
     .services{margin-top:50px}
     .service{padding:22px; border:1px dashed var(--border); border-radius:12px; background:linear-gradient(180deg, rgba(37,99,235,.08), transparent); min-height:200px}
@@ -97,6 +96,7 @@
   <div class="container">
     <header class="site-header" role="banner">
       <div class="brand">
+        <span class="kicker">Portfolio</span>
         <h1>Emmanuelle Ouine</h1>
         <p class="tagline">Rédactrice web SEO</p>
       </div>
@@ -112,7 +112,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="panel">
         <h2 id="hero-title">Des contenus clairs, optimisés et agréables à lire</h2>
-        <p>J’accompagne entrepreneurs et PME à gagner en visibilité grâce à des articles SEO, des pages web efficaces et une optimisation on-page pragmatique.</p>
+        <p>J’accompagne entrepreneurs et PME à gagner en visibilité grâce à des articles SEO, des pages web efficaces et une optimisation on‑page pragmatique.</p>
         <a class="cta" href="#contact">Discuter de votre projet</a>
       </div>
       <div class="panel" aria-label="Points forts">
@@ -127,7 +127,7 @@
     <main id="main">
       <section class="about" aria-labelledby="about-title">
         <h2 id="about-title">À propos</h2>
-        <p>Je suis rédactrice web SEO freelance. J’aide les indépendants et petites entreprises à renforcer leur présence en ligne avec des contenus précis, structurés et pensés pour leurs lecteurs. Ci-dessous, six exemples concrets rédigés pour des clients aux univers variés.</p>
+        <p>Je suis rédactrice web SEO freelance. J’aide les indépendants et petites entreprises à renforcer leur présence en ligne avec des contenus précis, structurés et pensés pour leurs lecteurs. Ci‑dessous, six exemples concrets rédigés pour des clients aux univers variés.</p>
       </section>
 
       <section id="realisations" class="portfolio-section" aria-labelledby="work-title">
@@ -137,49 +137,43 @@
           <!-- DR — Mastering audio -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-             
+              <span class="tag client">Deviation Records</span>
               <span class="tag">Musique</span>
             </div>
             <h3 itemprop="name">5 étapes pour réussir son mastering audio</h3>
             <p itemprop="description">Guide pratique pour finaliser un morceau prêt à diffuser : préparation, ajustements, export et validation.</p>
             <div class="foot">
-              <div class="foot-left">
-                <span class="date">2025</span>
-              </div>
+              <span class="date">2025</span>
               <a class="btn-link" href="https://www.deviation-records.com/2025/08/13/5-etapes-mastering-audio/" target="_blank" rel="noopener">Lire l’article</a>
             </div>
           </article>
 
-          <!-- Business Aptitude — Erreur 504 (note en footer avant la date) -->
+          <!-- Business Aptitude — Erreur 504 -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-             
+              <span class="tag client">Business Aptitude</span>
+              <span class="tag badge-note">Contenu rédigé — Intégration client</span>
               <span class="tag">Technique</span>
             </div>
             <h3 itemprop="name">Erreur 504 : diagnostic et solutions</h3>
             <p itemprop="description">Un article pédagogique qui explique les causes, impacts et résolutions d’une erreur 504, avec conseils actionnables.</p>
             <div class="foot">
-              <div class="foot-left">
-                <span class="note-client">Contenu intégré par le client.</span>
-                <span class="date">2024</span>
-              </div>
+              <span class="date">2024</span>
               <a class="btn-link" href="https://www.business-aptitude.com/erreur-504/" target="_blank" rel="noopener">Lire l’article</a>
             </div>
           </article>
 
-          <!-- A-Stratégie — Détectives Saint-Tropez (note en footer avant la date) -->
+          <!-- A-Stratégie — Détectives Saint-Tropez -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-            
+              <span class="tag client">A‑Stratégie</span>
+              <span class="tag badge-note">Contenu rédigé — Intégration client</span>
               <span class="tag">Services</span>
             </div>
-            <h3 itemprop="name">Détectives privés à Saint-Tropez : missions & cadre légal</h3>
+            <h3 itemprop="name">Détectives privés à Saint‑Tropez : missions & cadre légal</h3>
             <p itemprop="description">Présentation claire des prestations d’enquête et rappels légaux pour les particuliers et professionnels.</p>
             <div class="foot">
-              <div class="foot-left">
-                <span class="note-client">Contenu intégré par le client.</span>
-                <span class="date">2025</span>
-              </div>
+              <span class="date">2025</span>
               <a class="btn-link" href="https://www.astrategie.com/nos-agences/agence-detectives-st-tropez/" target="_blank" rel="noopener">Lire l’article</a>
             </div>
           </article>
@@ -187,15 +181,13 @@
           <!-- DR — Soutenir les labels indépendants -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-             
+              <span class="tag client">Deviation Records</span>
               <span class="tag">Musique</span>
             </div>
             <h3 itemprop="name">Soutenir les labels indépendants : pourquoi et comment</h3>
             <p itemprop="description">Un article engagé qui met en lumière le rôle essentiel des labels indés et propose des pistes concrètes pour les soutenir.</p>
             <div class="foot">
-              <div class="foot-left">
-                <span class="date">Mai 2025</span>
-              </div>
+              <span class="date">Mai 2025</span>
               <a class="btn-link" href="https://www.deviation-records.com/2025/05/28/soutenir-labels-independants/" target="_blank" rel="noopener">Lire l’article</a>
             </div>
           </article>
@@ -203,15 +195,13 @@
           <!-- DR — Rôle de l’ingénieur du son -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-             
+              <span class="tag client">Deviation Records</span>
               <span class="tag">Production</span>
             </div>
             <h3 itemprop="name">Le rôle de l’ingénieur du son</h3>
             <p itemprop="description">De l’enregistrement au mastering : éclairage sur un métier clé qui façonne la couleur et la qualité d’un disque.</p>
             <div class="foot">
-              <div class="foot-left">
-                <span class="date">Juillet 2025</span>
-              </div>
+              <span class="date">Juillet 2025</span>
               <a class="btn-link" href="https://www.deviation-records.com/2025/07/11/le-role-de-l-ingenieur-du-son/" target="_blank" rel="noopener">Lire l’article</a>
             </div>
           </article>
@@ -219,15 +209,13 @@
           <!-- DR — Écouter un album en entier à l’ère du streaming -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-             
+              <span class="tag client">Deviation Records</span>
               <span class="tag">Culture</span>
             </div>
             <h3 itemprop="name">Pourquoi écouter un album en entier à l’ère du streaming</h3>
             <p itemprop="description">Une invitation à reprendre le temps d’écouter : contexte, intentions artistiques et expérience complète de l’album.</p>
             <div class="foot">
-              <div class="foot-left">
-                <span class="date">Juillet 2025</span>
-              </div>
+              <span class="date">Juillet 2025</span>
               <a class="btn-link" href="https://www.deviation-records.com/2025/07/11/ecouter-un-album-en-entier-streaming/" target="_blank" rel="noopener">Lire l’article</a>
             </div>
           </article>
@@ -244,10 +232,10 @@
           </div>
           <div class="service">
             <h3>Pages de site efficaces</h3>
-            <p>Pages Services / À propos / FAQ : claires, orientées conversion, avec micro-copies et appels à l’action pertinents.</p>
+            <p>Pages Services / À propos / FAQ : claires, orientées conversion, avec micro‑copies et appels à l’action pertinents.</p>
           </div>
           <div class="service">
-            <h3>Optimisation on-page</h3>
+            <h3>Optimisation on‑page</h3>
             <p>Réécriture, enrichissement sémantique, liens internes, amélioration lisibilité, check technique léger (performances et balisage).</p>
           </div>
         </div>
@@ -256,19 +244,3 @@
       <section id="contact" class="about" aria-labelledby="contact-title" style="margin-top:50px">
         <h2 id="contact-title">Parlons de votre contenu</h2>
         <p>
-          Vous avez un projet éditorial ou besoin d’un accompagnement SEO ?
-          Discutons de votre stratégie de contenu et voyons comment je peux vous aider à la rendre plus claire, visible et efficace.
-        </p>
-        <a href="mailto:e.o.redactriceweb@gmail.com" class="contact-btn">Me contacter</a>
-      </section>
-
-      <footer role="contentinfo">
-        <p>© 2025 — Emmanuelle Ouine. Tous droits réservés.</p>
-        <p style="margin-top: 10px; font-size: 0.9rem; color: #6b7280;">
-          Portfolio conçu avec ❤️ sur GitHub Pages
-        </p>
-      </footer>
-    </main>
-  </div>
-</body>
-</html>
