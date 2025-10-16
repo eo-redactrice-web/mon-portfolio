@@ -3,131 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Emmanuelle Ouine — Rédactrice Web SEO | Portfolio</title>
-  <meta name="description" content="Rédactrice web SEO freelance : articles optimisés, pages de site, optimisation on‑page. Découvrez mes réalisations et mes services." />
-  <meta name="color-scheme" content="dark light">
-  <meta property="og:title" content="Emmanuelle Ouine — Rédactrice Web SEO" />
-  <meta property="og:description" content="Articles SEO, optimisation on‑page, pages de site. 6 réalisations client." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="fr_FR" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Portfolio — Emmanuelle Ouine | Rédactrice Web SEO</title>
+  <meta name="description" content="Portfolio de rédaction web SEO : découvrez des articles optimisés, clairs et agréables à lire, rédigés pour des projets variés." />
+
   <style>
+    /* === PALETTE VIGNETTE CLAIRE === */
     :root{
-      /* Thème clair provisoire — sera ajusté d'après la vignette LinkedIn */
-      --bg:#f9f8f5;          /* fond clair chaud */
-      --panel:#ffffff;       /* cartes/panels */
-      --panel-2:#ffffff;
-      --primary:#0a0e27;     /* bleu nuit (texte/boutons) */
-      --primary-2:#1f2a44;
-      --text:#0a0e27;        /* texte par défaut */
-      --muted:#4b5563;       /* texte secondaire */
-      --border:#e5e7eb;      /* bordures claires */
-      --glow: 0 8px 24px rgba(10,14,39,.08);
+      --bg:#F4EEE6;        /* crème chaud */
+      --panel:#FFFFFF;     /* panneaux & cartes */
+      --panel-2:#FFFFFF;
+      --primary:#1F2A44;   /* bleu nuit */
+      --primary-2:#2B3A59; /* hover */
+      --text:#1F2937;      /* texte principal */
+      --muted:#6B7280;     /* texte secondaire */
+      --border:#E6E1DA;    /* bordures */
+      --glow: 0 8px 24px rgba(31,42,68,.10);
     }
-    *{box-sizing:border-box}
-    html,body{
-      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      line-height:1.6; color:var(--text);
-      background: radial-gradient(1200px 800px at 10% 0%, #ffffff 0%, var(--bg) 60%);
+
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+      line-height:1.6;
+      color:var(--text);
+      background:var(--bg);
     }
-    body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; line-height:1.6; color:var(--text); background:radial-gradient(1200px 800px at 10% 0%, #0e1440 0%, var(--bg) 55%);}    
-    a{color:var(--text)}
-    .container{max-width:1120px; margin-inline:auto; padding:64px 20px}
-    .site-header{display:flex; align-items:center; justify-content:space-between; gap:18px; padding-bottom:28px; border-bottom:2px solid var(--border); margin-bottom:40px; background-color:transparent}
-    .brand{display:flex; flex-direction:column}
-    .brand h1{margin:0; font-size:clamp(1.5rem,2.5vw,2rem); font-weight:700}
-    .brand .tagline{margin:2px 0 0; color:var(--muted)}
-    nav ul{list-style:none; display:flex; gap:16px; padding:0; margin:0; flex-wrap:wrap}
-    nav a{display:inline-block; padding:10px 14px; border:1px solid var(--border); border-radius:8px; text-decoration:none; color:var(--text)}
-    nav a:hover{border-color:var(--primary); box-shadow:var(--glow)}
 
-    .skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
-    .skip-link:focus{position:static; width:auto; height:auto; padding:8px 12px; background:#111827; border:2px solid var(--primary); border-radius:8px}
+    .container{max-width:1100px; margin:0 auto; padding:60px 20px;}
 
-    .hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; align-items:center; margin-bottom:40px}
-    .hero .panel{background:var(--panel); border:1px solid var(--primary); border-radius:14px; padding:28px; box-shadow:0 4px 16px rgba(30,58,138,.22)}
-    .hero h2{font-size:clamp(1.6rem,3.8vw,2.4rem); margin:0 0 10px}
-    .hero p{color:#d1d5db; margin:0 0 18px}
-    .cta{display:inline-block; text-decoration:none; background:var(--primary); color:#fff; padding:12px 18px; border-radius:10px; border:2px solid var(--primary); font-weight:600}
-    .cta:hover{background:var(--primary-2); border-color:var(--primary-2)}
-
-    .about{background:var(--panel-2); border:1px solid var(--primary); border-radius:12px; padding:28px; margin-bottom:48px; box-shadow:0 4px 16px rgba(30,58,138,.2)}
-    .about h2{margin:0 0 12px}
-
-    .section-title{display:flex; align-items:center; justify-content:center; gap:10px; margin:18px 0 26px}
-    .section-title h2{font-size:1.8rem; margin:0}
-
-    .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
-    .card{background:var(--panel-2); border:1px solid var(--primary); border-radius:14px; padding:24px; box-shadow:0 4px 16px rgba(30,58,138,.18); display:flex; flex-direction:column; min-height:280px}
-    .card:hover{transform:translateY(-3px); box-shadow: var(--glow); transition:transform .3s ease, box-shadow .3s ease}
-    .meta{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px}
-    .tag{display:inline-block; padding:6px 10px; background:#1e3a8a; color:#e5e7eb; border-radius:999px; font-size:.8rem; border:1px solid var(--border)}
-    .tag.client{background:var(--primary); color:#fff}
-    .badge-note{background:#0b3cbd}
-    .card h3{margin:6px 0 10px; font-size:1.25rem}
-    .card p{color:#d1d5db; margin:0 0 14px}
-    .card .foot{margin-top:auto; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--primary); padding-top:14px}
-    .date{color:var(--muted); font-size:.9rem}
-    .btn-link{display:inline-block; color:#fff; text-decoration:none; font-weight:600; padding:10px 16px; border:2px solid var(--primary); border-radius:10px}
-    .btn-link:hover{background:var(--primary); box-shadow:var(--glow)}
-
-    .services{margin-top:50px}
-    .service{padding:22px; border:1px dashed var(--border); border-radius:12px; background:linear-gradient(180deg, rgba(37,99,235,.08), transparent); min-height:200px}
-    .service h3{margin:0 0 6px}
-    .service p{margin:0; color:#cbd5e1}
-
-    footer{margin-top:56px; padding-top:32px; border-top:2px solid var(--border); text-align:center; color:var(--muted)}
-    .contact-btn{display:inline-block; margin-top:14px; padding:12px 22px; background:var(--primary); color:#fff; border-radius:10px; text-decoration:none; font-weight:600}
-    .contact-btn:hover{background:var(--primary-2)}
-
-    @media (max-width: 980px){
-      .hero{grid-template-columns:1fr}
-      .grid{grid-template-columns: 1fr 1fr}
+    /* === HEADER === */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:50px;
+      padding-bottom:25px;
+      border-bottom:2px solid var(--border);
     }
-    @media (max-width: 680px){
-      .grid{grid-template-columns: 1fr}
-      nav{width:100%}
-      nav ul{justify-content:space-between}
+
+    .kicker{
+      display:block;
+      letter-spacing:.01em;
+      font-size:clamp(1.8rem,4vw,2.6rem);
+      font-weight:800;
+      color:var(--primary);
+      margin-bottom:4px;
     }
-    /* Titre de section en tête */
-.kicker{
-  display:block;
-  letter-spacing:.01em;
-  font-size:clamp(1.8rem,4vw,2.6rem);
-  font-weight:800;
-  color:var(--primary);
-  margin-bottom:4px;
-}
 
-/* Nom plus discret */
-.brand h1{
-  margin:0;
-  font-size:clamp(1rem,2vw,1.25rem);
-  font-weight:600;
-  color:var(--muted);
-}
+    .brand h1{
+      margin:0;
+      font-size:clamp(1rem,2vw,1.25rem);
+      font-weight:600;
+      color:var(--muted);
+    }
 
-/* Note en footer, italique et lisible */
-.note-client{
-  font-size:0.8rem;
-  color:#6b7280;
-  font-style:italic;
-  opacity:1;
-}
+    .tagline{color:var(--muted); font-size:.95rem;}
 
+    nav ul{display:flex; gap:16px; list-style:none; padding:0; margin:0;}
+    nav a{
+      text-decoration:none;
+      color:var(--primary);
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:8px;
+      padding:10px 14px;
+      font-weight:500;
+      transition:all .3s ease;
+    }
+    nav a:hover{border-color:var(--primary); box-shadow:var(--glow);}
+
+    /* === SECTIONS === */
+    .about, .hero, .card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow:0 4px 16px rgba(0,0,0,.06);
+    }
+
+    .about{padding:30px; margin-bottom:60px;}
+    .about h2{margin-bottom:15px; color:var(--primary);}
+
+    .hero{padding:30px; margin-bottom:50px;}
+    .hero h2{font-size:1.8rem; color:var(--primary); margin-bottom:10px;}
+    .hero p{color:var(--text); margin-bottom:20px;}
+
+    .cta{
+      display:inline-block;
+      background:var(--primary);
+      color:#fff;
+      padding:12px 20px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      transition:background-color .3s ease;
+    }
+    .cta:hover{background:var(--primary-2);}
+
+    /* === PORTFOLIO === */
+    .portfolio-section h2{text-align:center; color:var(--primary); margin-bottom:40px;}
+    .articles-grid{display:grid; gap:25px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+
+    .card{
+      padding:25px;
+      display:flex;
+      flex-direction:column;
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .card:hover{transform:translateY(-4px); box-shadow:var(--glow);}
+
+    .meta{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;}
+    .tag{
+      background:#EFF1F5;
+      color:var(--primary);
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:.8rem;
+    }
+
+    .card h3{font-size:1.3rem; color:var(--primary); margin-bottom:10px;}
+    .card p{color:var(--text); margin-bottom:15px;}
+
+    .foot{
+      margin-top:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-top:1px solid var(--border);
+      padding-top:14px;
+    }
+    .foot-left{display:flex; align-items:center; gap:10px;}
+    .date{color:var(--muted); font-size:.9rem;}
+    .note-client{font-size:.8rem; color:#6b7280; font-style:italic;}
+
+    .btn-link{
+      border:2px solid var(--primary);
+      color:var(--primary);
+      background:#fff;
+      border-radius:10px;
+      padding:8px 16px;
+      text-decoration:none;
+      font-weight:600;
+      transition:all .3s ease;
+    }
+    .btn-link:hover{background:var(--primary); color:#fff; box-shadow:var(--glow);}
+
+    footer{text-align:center; margin-top:60px; padding-top:40px; border-top:2px solid var(--border); color:var(--muted);}
+    .contact-btn{display:inline-block; margin-top:20px; padding:14px 32px; background:var(--primary); color:white; text-decoration:none; border-radius:6px; font-weight:500;}
+    .contact-btn:hover{background:var(--primary-2);}
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Aller au contenu principal</a>
   <div class="container">
-    <header class="site-header" role="banner">
+    <header>
       <div class="brand">
-  <span class="kicker">Portfolio</span>
-  <h1>Emmanuelle Ouine</h1>
-  <p class="tagline">Rédactrice web SEO</p>
-</div>
-
-      <nav aria-label="Navigation principale">
+        <span class="kicker">Portfolio</span>
+        <h1>Emmanuelle Ouine</h1>
+        <p class="tagline">Rédactrice web SEO</p>
+      </div>
+      <nav>
         <ul>
           <li><a href="#realisations">Réalisations</a></li>
           <li><a href="#services">Services</a></li>
@@ -136,139 +169,120 @@
       </nav>
     </header>
 
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="panel">
-        <h2 id="hero-title">Des contenus clairs, optimisés et agréables à lire</h2>
-        <p>J’accompagne entrepreneurs et PME à gagner en visibilité grâce à des articles SEO, des pages web efficaces et une optimisation on‑page pragmatique.</p>
-        <a class="cta" href="#contact">Discuter de votre projet</a>
-      </div>
-      <div class="panel" aria-label="Points forts">
-        <ul>
-          <li><strong>SEO utile</strong> : structure, intention de recherche, maillage.</li>
-          <li><strong>Tonalité juste</strong> : claire, professionnelle, accessible.</li>
-          <li><strong>Livrables propres</strong> : briefs, sources, et suggestions titres/meta.</li>
-        </ul>
+    <section class="about">
+      <h2>À propos</h2>
+      <p>Je suis rédactrice web SEO freelance. J’aide les entrepreneurs et indépendants à renforcer leur visibilité grâce à des contenus clairs, structurés et adaptés à leur audience.</p>
+    </section>
+
+    <section id="realisations" class="portfolio-section">
+      <h2>Mes réalisations</h2>
+      <div class="articles-grid">
+
+        <!-- Article 1 -->
+        <article class="card">
+          <div class="meta">
+            <span class="tag">Musique</span>
+          </div>
+          <h3>5 étapes pour réussir son mastering audio</h3>
+          <p>Guide pratique pour finaliser un morceau prêt à diffuser : préparation, ajustements, export et validation.</p>
+          <div class="foot">
+            <div class="foot-left">
+              <span class="date">2025</span>
+            </div>
+            <a href="https://www.deviation-records.com/2025/08/13/5-etapes-mastering-audio/" class="btn-link" target="_blank">Lire l’article</a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="card">
+          <div class="meta">
+            <span class="tag">Technique</span>
+          </div>
+          <h3>Erreur 504 : diagnostic et solutions</h3>
+          <p>Un article pédagogique qui explique les causes, impacts et résolutions d’une erreur 504, avec conseils actionnables.</p>
+          <div class="foot">
+            <div class="foot-left">
+              <span class="note-client">Contenu intégré par le client</span>
+              <span class="date">2024</span>
+            </div>
+            <a href="https://www.business-aptitude.com/erreur-504/" class="btn-link" target="_blank">Lire l’article</a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="card">
+          <div class="meta">
+            <span class="tag">Services</span>
+          </div>
+          <h3>Détectives privés à Saint-Tropez : missions & cadre légal</h3>
+          <p>Présentation claire des prestations d’enquête et rappels légaux pour les particuliers et professionnels.</p>
+          <div class="foot">
+            <div class="foot-left">
+              <span class="note-client">Contenu intégré par le client</span>
+              <span class="date">2025</span>
+            </div>
+            <a href="https://www.astrategie.com/nos-agences/agence-detectives-st-tropez/" class="btn-link" target="_blank">Lire l’article</a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="card">
+          <div class="meta">
+            <span class="tag">Musique</span>
+          </div>
+          <h3>Soutenir les labels indépendants : pourquoi et comment</h3>
+          <p>Un article engagé qui met en lumière le rôle essentiel des labels indés et propose des pistes concrètes pour les soutenir.</p>
+          <div class="foot">
+            <div class="foot-left">
+              <span class="date">Mai 2025</span>
+            </div>
+            <a href="https://www.deviation-records.com/2025/05/28/soutenir-labels-independants/" class="btn-link" target="_blank">Lire l’article</a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="card">
+          <div class="meta">
+            <span class="tag">Production</span>
+          </div>
+          <h3>Le rôle de l’ingénieur du son</h3>
+          <p>De l’enregistrement au mastering : éclairage sur un métier clé qui façonne la couleur et la qualité d’un disque.</p>
+          <div class="foot">
+            <div class="foot-left">
+              <span class="date">Juillet 2025</span>
+            </div>
+            <a href="https://www.deviation-records.com/2025/07/11/le-role-de-l-ingenieur-du-son/" class="btn-link" target="_blank">Lire l’article</a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="card">
+          <div class="meta">
+            <span class="tag">Culture</span>
+          </div>
+          <h3>Pourquoi écouter un album en entier à l’ère du streaming</h3>
+          <p>Une invitation à reprendre le temps d’écouter : contexte, intentions artistiques et expérience complète de l’album.</p>
+          <div class="foot">
+            <div class="foot-left">
+              <span class="date">Juillet 2025</span>
+            </div>
+            <a href="https://www.deviation-records.com/2025/07/11/ecouter-un-album-en-entier-streaming/" class="btn-link" target="_blank">Lire l’article</a>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <main id="main">
-      <section class="about" aria-labelledby="about-title">
-        <h2 id="about-title">À propos</h2>
-        <p>Je suis rédactrice web SEO freelance. J’aide les indépendants et petites entreprises à renforcer leur présence en ligne avec des contenus précis, structurés et pensés pour leurs lecteurs. Ci‑dessous, six exemples concrets rédigés pour des clients aux univers variés.</p>
-      </section>
+    <section id="contact" class="about">
+      <h2>Parlons de votre contenu</h2>
+      <p>Vous avez un projet éditorial ou besoin d’un accompagnement SEO ? Discutons de votre stratégie de contenu et voyons comment la rendre plus claire, visible et efficace.</p>
+      <a href="mailto:e.o.redactriceweb@gmail.com" class="contact-btn">Me contacter</a>
+    </section>
 
-      <section id="realisations" class="portfolio-section" aria-labelledby="work-title">
-        <div class="section-title"><h2 id="work-title">Mes réalisations</h2></div>
-        <div class="grid">
-
-          <!-- DR — Mastering audio -->
-          <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
-            <div class="meta">
-              
-              <span class="tag">Musique</span>
-            </div>
-            <h3 itemprop="name">5 étapes pour réussir son mastering audio</h3>
-            <p itemprop="description">Guide pratique pour finaliser un morceau prêt à diffuser : préparation, ajustements, export et validation.</p>
-            <div class="foot">
-              <span class="date">2025</span>
-              <a class="btn-link" href="https://www.deviation-records.com/2025/08/13/5-etapes-mastering-audio/" target="_blank" rel="noopener">Lire l’article</a>
-            </div>
-          </article>
-
-          <!-- Business Aptitude — Erreur 504 -->
-          <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
-            <div class="meta">
-             
-              
-              <span class="tag">Technique</span>
-            </div>
-            <h3 itemprop="name">Erreur 504 : diagnostic et solutions</h3>
-            <p itemprop="description">Un article pédagogique qui explique les causes, impacts et résolutions d’une erreur 504, avec conseils actionnables.</p>
-            <div class="foot">
-               <div class="foot-left">
-    <span class="note-client"><em>Contenu intégré par le client.</em></span>
-              <span class="date">2024</span>
-              <a class="btn-link" href="https://www.business-aptitude.com/erreur-504/" target="_blank" rel="noopener">Lire l’article</a>
-            </div>
-          </article>
-
-          <!-- A-Stratégie — Détectives Saint-Tropez -->
-          <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
-            <div class="meta">
-            
-              <span class="tag">Services</span>
-            </div>
-            <h3 itemprop="name">Détectives privés à Saint‑Tropez : missions & cadre légal</h3>
-            <p itemprop="description">Présentation claire des prestations d’enquête et rappels légaux pour les particuliers et professionnels.</p>
-            <div class="foot">
-              <span class="date">2025</span>
-              <a class="btn-link" href="https://www.astrategie.com/nos-agences/agence-detectives-st-tropez/" target="_blank" rel="noopener">Lire l’article</a>
-            </div>
-          </article>
-
-          <!-- DR — Soutenir les labels indépendants -->
-          <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
-            <div class="meta">
-             
-              <span class="tag">Musique</span>
-            </div>
-            <h3 itemprop="name">Soutenir les labels indépendants : pourquoi et comment</h3>
-            <p itemprop="description">Un article engagé qui met en lumière le rôle essentiel des labels indés et propose des pistes concrètes pour les soutenir.</p>
-            <div class="foot">
-              <span class="date">Mai 2025</span>
-              <a class="btn-link" href="https://www.deviation-records.com/2025/05/28/soutenir-labels-independants/" target="_blank" rel="noopener">Lire l’article</a>
-            </div>
-          </article>
-
-          <!-- DR — Rôle de l’ingénieur du son -->
-          <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
-            <div class="meta">
-              
-              <span class="tag">Production</span>
-            </div>
-            <h3 itemprop="name">Le rôle de l’ingénieur du son</h3>
-            <p itemprop="description">De l’enregistrement au mastering : éclairage sur un métier clé qui façonne la couleur et la qualité d’un disque.</p>
-            <div class="foot">
-              <span class="date">Juillet 2025</span>
-              <a class="btn-link" href="https://www.deviation-records.com/2025/07/11/le-role-de-l-ingenieur-du-son/" target="_blank" rel="noopener">Lire l’article</a>
-            </div>
-          </article>
-
-          <!-- DR — Écouter un album en entier à l’ère du streaming -->
-          <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
-            <div class="meta">
-             
-              <span class="tag">Culture</span>
-            </div>
-            <h3 itemprop="name">Pourquoi écouter un album en entier à l’ère du streaming</h3>
-            <p itemprop="description">Une invitation à reprendre le temps d’écouter : contexte, intentions artistiques et expérience complète de l’album.</p>
-            <div class="foot">
-              <span class="date">Juillet 2025</span>
-              <a class="btn-link" href="https://www.deviation-records.com/2025/07/11/ecouter-un-album-en-entier-streaming/" target="_blank" rel="noopener">Lire l’article</a>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <section id="services" class="services" aria-labelledby="services-title">
-        <div class="section-title"><h2 id="services-title">Services proposés</h2></div>
-        <div class="grid">
-          <div class="service">
-            <h3>Articles SEO complets</h3>
-            <p>Recherche d’intention, plan structuré Hn, sources fiables, suggestions de maillage interne et métadonnées (title/description).</p>
-          </div>
-          <div class="service">
-            <h3>Pages de site efficaces</h3>
-            <p>Pages Services / À propos / FAQ : claires, orientées conversion, avec micro‑copies et appels à l’action pertinents.</p>
-          </div>
-          <div class="service">
-            <h3>Optimisation on‑page</h3>
-            <p>Réécriture, enrichissement sémantique, liens internes, amélioration lisibilité, check technique léger (performances et balisage).</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="about" aria-labelledby="contact-title" style="margin-top:50px">
-        <h2 id="contact-title">Parlons de votre contenu</h2>
-        <p>
+    <footer>
+      <p>© 2025 — Emmanuelle Ouine. Tous droits réservés.</p>
+      <p style="margin-top:10px; font-size:0.9rem;">Portfolio conçu avec ❤️ sur GitHub Pages</p>
+    </footer>
+  </div>
+</body>
+</html>
