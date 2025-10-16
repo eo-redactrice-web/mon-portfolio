@@ -89,6 +89,32 @@
       nav{width:100%}
       nav ul{justify-content:space-between}
     }
+    /* Titre de section en tête */
+.kicker{
+  display:block;
+  letter-spacing:.01em;
+  font-size:clamp(1.8rem,4vw,2.6rem);
+  font-weight:800;
+  color:var(--primary);
+  margin-bottom:4px;
+}
+
+/* Nom plus discret */
+.brand h1{
+  margin:0;
+  font-size:clamp(1rem,2vw,1.25rem);
+  font-weight:600;
+  color:var(--muted);
+}
+
+/* Note en footer, italique et lisible */
+.note-client{
+  font-size:0.8rem;
+  color:#6b7280;
+  font-style:italic;
+  opacity:1;
+}
+
   </style>
 </head>
 <body>
@@ -96,10 +122,11 @@
   <div class="container">
     <header class="site-header" role="banner">
       <div class="brand">
-        <span class="kicker">Portfolio</span>
-        <h1>Emmanuelle Ouine</h1>
-        <p class="tagline">Rédactrice web SEO</p>
-      </div>
+  <span class="kicker">Portfolio</span>
+  <h1>Emmanuelle Ouine</h1>
+  <p class="tagline">Rédactrice web SEO</p>
+</div>
+
       <nav aria-label="Navigation principale">
         <ul>
           <li><a href="#realisations">Réalisations</a></li>
@@ -137,7 +164,7 @@
           <!-- DR — Mastering audio -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-              <span class="tag client">Deviation Records</span>
+              
               <span class="tag">Musique</span>
             </div>
             <h3 itemprop="name">5 étapes pour réussir son mastering audio</h3>
@@ -151,8 +178,8 @@
           <!-- Business Aptitude — Erreur 504 -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-              <span class="tag client">Business Aptitude</span>
-              <span class="tag badge-note">Contenu rédigé — Intégration client</span>
+             
+              
               <span class="tag">Technique</span>
             </div>
             <h3 itemprop="name">Erreur 504 : diagnostic et solutions</h3>
@@ -166,8 +193,7 @@
           <!-- A-Stratégie — Détectives Saint-Tropez -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-              <span class="tag client">A‑Stratégie</span>
-              <span class="tag badge-note">Contenu rédigé — Intégration client</span>
+            
               <span class="tag">Services</span>
             </div>
             <h3 itemprop="name">Détectives privés à Saint‑Tropez : missions & cadre légal</h3>
@@ -181,7 +207,7 @@
           <!-- DR — Soutenir les labels indépendants -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-              <span class="tag client">Deviation Records</span>
+             
               <span class="tag">Musique</span>
             </div>
             <h3 itemprop="name">Soutenir les labels indépendants : pourquoi et comment</h3>
@@ -195,7 +221,7 @@
           <!-- DR — Rôle de l’ingénieur du son -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-              <span class="tag client">Deviation Records</span>
+              
               <span class="tag">Production</span>
             </div>
             <h3 itemprop="name">Le rôle de l’ingénieur du son</h3>
@@ -209,7 +235,7 @@
           <!-- DR — Écouter un album en entier à l’ère du streaming -->
           <article class="card" itemscope itemtype="https://schema.org/CreativeWork">
             <div class="meta">
-              <span class="tag client">Deviation Records</span>
+             
               <span class="tag">Culture</span>
             </div>
             <h3 itemprop="name">Pourquoi écouter un album en entier à l’ère du streaming</h3>
