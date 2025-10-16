@@ -150,6 +150,53 @@
     footer{text-align:center; margin-top:60px; padding-top:40px; border-top:2px solid var(--border); color:var(--muted);}
     .contact-btn{display:inline-block; margin-top:20px; padding:14px 32px; background:var(--primary); color:white; text-decoration:none; border-radius:6px; font-weight:500;}
     .contact-btn:hover{background:var(--primary-2);}
+    /* --- Patch d'équilibrage carte --- */
+
+/* Footer : alignement + respiration */
+.card .foot{
+  padding-top:12px;
+  align-items:center;
+  gap:12px;
+}
+
+/* Bloc gauche : note + date bien alignées */
+.foot-left{
+  display:flex;
+  align-items:baseline;   /* aligne sur la ligne de texte */
+  gap:14px;
+}
+
+/* Note : plus petite, gris neutre, italique léger */
+.note-client{
+  font-size:.78rem;
+  color:#8A8F98;          /* + lisible que #6b7280 sur crème */
+  font-style:italic;
+  letter-spacing:.1px;
+}
+
+/* Date : un peu plus légère pour ne pas attirer l’œil */
+.date{ color:#9097A1; }
+
+/* Bouton : moins massif (style outline raffiné) */
+.btn-link{
+  padding:8px 14px;
+  border-radius:12px;
+  border-width:1.5px;
+  font-size:1rem;         /* évite l’effet “gros tampon” */
+  line-height:1.1;
+}
+.btn-link:hover{ box-shadow:0 6px 18px rgba(31,42,68,.12); }
+
+/* Séparateur trop visible : l’adoucir */
+.card .foot{ border-top:1px solid rgba(0,0,0,.06); }
+
+/* Tag : pastille plus douce, proche de ta vignette */
+.tag{
+  background:#EEF0F4;
+  color:#1F2A44;
+  border-color:#E6E1DA;
+}
+
   </style>
 </head>
 <body>
