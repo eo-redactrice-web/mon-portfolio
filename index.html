@@ -184,6 +184,37 @@
   margin-bottom: 60px;
   letter-spacing: 0.02em;
 }
+/* Section Services */
+#services h2 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+#services .articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+#services .card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+#services .card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+#services .card p {
+  color: var(--text);
+  line-height: 1.6;
+}
 
   </style>
 </head>
@@ -307,10 +338,29 @@
 
       </div>
     </section>
+<section id="services" class="about">
+  <h2>Services proposés</h2>
+  <div class="articles-grid">
+    <article class="card">
+      <h3>Articles SEO complets</h3>
+      <p>Recherche d’intention, plan structuré Hn, sources fiables, métadonnées optimisées.</p>
+    </article>
+
+    <article class="card">
+      <h3>Pages de site efficaces</h3>
+      <p>Pages Services, À propos ou FAQ : optimisation du contenu pour la clarté, la cohérence et le référencement.</p>
+    </article>
+
+    <article class="card">
+      <h3>Optimisation on-page</h3>
+      <p>Réécriture, enrichissement sémantique, liens internes, amélioration de la lisibilité et contrôle technique léger (performances, balisage, métadonnées).</p>
+    </article>
+  </div>
+</section>
 
     <section id="contact" class="about">
       <h2>Parlons de votre contenu</h2>
-      <p>Vous avez un projet éditorial ou besoin d’un accompagnement SEO ? Discutons de votre stratégie de contenu et voyons comment la rendre plus claire, visible et efficace.</p>
+      <p>Vous cherchez à renforcer votre présence en ligne avec des contenus de qualité ? Je rédige des textes clairs, optimisés et alignés sur vos objectifs.</p>
       <a href="mailto:e.o.redactriceweb@gmail.com" class="contact-btn">Me contacter</a>
     </section>
 
