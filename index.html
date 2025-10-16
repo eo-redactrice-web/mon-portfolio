@@ -7,16 +7,16 @@
   <meta name="description" content="Portfolio de rédaction web SEO : découvrez des articles optimisés, clairs et agréables à lire, rédigés pour des projets variés." />
 
   <style>
-    /* === PALETTE VIGNETTE CLAIRE === */
+    /* === PALETTE CLAIRE inspirée de la vignette === */
     :root{
       --bg:#F4EEE6;        /* crème chaud */
-      --panel:#FFFFFF;     /* panneaux & cartes */
+      --panel:#FFFFFF;     /* cartes/panels */
       --panel-2:#FFFFFF;
       --primary:#1F2A44;   /* bleu nuit */
       --primary-2:#2B3A59; /* hover */
       --text:#1F2937;      /* texte principal */
       --muted:#6B7280;     /* texte secondaire */
-      --border:#E6E1DA;    /* bordures */
+      --border:#E6E1DA;    /* bordures chaudes */
       --glow: 0 8px 24px rgba(31,42,68,.10);
     }
 
@@ -112,7 +112,7 @@
 
     .meta{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;}
     .tag{
-      background:#EFF1F5;
+      background:#EEF0F4;
       color:var(--primary);
       border:1px solid var(--border);
       border-radius:999px;
@@ -128,75 +128,53 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      border-top:1px solid var(--border);
-      padding-top:14px;
+      border-top:1px solid rgba(0,0,0,.06);
+      padding-top:12px;
+      gap:12px;
     }
-    .foot-left{display:flex; align-items:center; gap:10px;}
-    .date{color:var(--muted); font-size:.9rem;}
-    .note-client{font-size:.8rem; color:#6b7280; font-style:italic;}
 
+    .foot-left{
+      display:flex;
+      align-items:baseline;
+      gap:14px;
+    }
+
+    .note-client{
+      font-size:.78rem;
+      color:#8A8F98;
+      font-style:italic;
+      letter-spacing:.1px;
+    }
+
+    .date{ color:#9097A1; font-size:.9rem; }
+
+    /* === Boutons remplis bleu nuit === */
     .btn-link{
-      border:2px solid var(--primary);
-      color:var(--primary);
-      background:#fff;
-      border-radius:10px;
-      padding:8px 16px;
-      text-decoration:none;
+      background:var(--primary);
+      color:#fff;
+      border:1.5px solid var(--primary);
+      border-radius:12px;
+      padding:8px 14px;
       font-weight:600;
+      font-size:1rem;
+      line-height:1.1;
+      text-decoration:none;
       transition:all .3s ease;
     }
-    .btn-link:hover{background:var(--primary); color:#fff; box-shadow:var(--glow);}
+    .btn-link:hover{background:var(--primary-2); border-color:var(--primary-2); box-shadow:0 6px 18px rgba(31,42,68,.12);}
 
     footer{text-align:center; margin-top:60px; padding-top:40px; border-top:2px solid var(--border); color:var(--muted);}
-    .contact-btn{display:inline-block; margin-top:20px; padding:14px 32px; background:var(--primary); color:white; text-decoration:none; border-radius:6px; font-weight:500;}
+    .contact-btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:14px 32px;
+      background:var(--primary);
+      color:white;
+      text-decoration:none;
+      border-radius:6px;
+      font-weight:500;
+    }
     .contact-btn:hover{background:var(--primary-2);}
-    /* --- Patch d'équilibrage carte --- */
-
-/* Footer : alignement + respiration */
-.card .foot{
-  padding-top:12px;
-  align-items:center;
-  gap:12px;
-}
-
-/* Bloc gauche : note + date bien alignées */
-.foot-left{
-  display:flex;
-  align-items:baseline;   /* aligne sur la ligne de texte */
-  gap:14px;
-}
-
-/* Note : plus petite, gris neutre, italique léger */
-.note-client{
-  font-size:.78rem;
-  color:#8A8F98;          /* + lisible que #6b7280 sur crème */
-  font-style:italic;
-  letter-spacing:.1px;
-}
-
-/* Date : un peu plus légère pour ne pas attirer l’œil */
-.date{ color:#9097A1; }
-
-/* Bouton : moins massif (style outline raffiné) */
-.btn-link{
-  padding:8px 14px;
-  border-radius:12px;
-  border-width:1.5px;
-  font-size:1rem;         /* évite l’effet “gros tampon” */
-  line-height:1.1;
-}
-.btn-link:hover{ box-shadow:0 6px 18px rgba(31,42,68,.12); }
-
-/* Séparateur trop visible : l’adoucir */
-.card .foot{ border-top:1px solid rgba(0,0,0,.06); }
-
-/* Tag : pastille plus douce, proche de ta vignette */
-.tag{
-  background:#EEF0F4;
-  color:#1F2A44;
-  border-color:#E6E1DA;
-}
-
   </style>
 </head>
 <body>
