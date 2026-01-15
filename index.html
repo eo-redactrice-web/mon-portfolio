@@ -7,16 +7,14 @@
   <meta name="description" content="Portfolio de rédaction web SEO : découvrez des articles optimisés, clairs et agréables à lire, rédigés pour des projets variés." />
 
   <style>
-    /* === PALETTE CLAIRE inspirée de la vignette === */
     :root{
-      --bg:#F4EEE6;        /* crème chaud */
-      --panel:#FFFFFF;     /* cartes/panels */
-      --panel-2:#FFFFFF;
-      --primary:#1F2A44;   /* bleu nuit */
-      --primary-2:#2B3A59; /* hover */
-      --text:#1F2937;      /* texte principal */
-      --muted:#6B7280;     /* texte secondaire */
-      --border:#E6E1DA;    /* bordures chaudes */
+      --bg:#F4EEE6;
+      --panel:#FFFFFF;
+      --primary:#1F2A44;
+      --primary-2:#2B3A59;
+      --text:#1F2937;
+      --muted:#6B7280;
+      --border:#E6E1DA;
       --glow: 0 8px 24px rgba(31,42,68,.10);
     }
 
@@ -30,7 +28,6 @@
 
     .container{max-width:1100px; margin:0 auto; padding:60px 20px;}
 
-    /* === HEADER === */
     header{
       display:flex;
       justify-content:space-between;
@@ -38,6 +35,7 @@
       margin-bottom:50px;
       padding-bottom:25px;
       border-bottom:2px solid var(--border);
+      gap: 20px;
     }
 
     .kicker{
@@ -58,7 +56,7 @@
 
     .tagline{color:var(--muted); font-size:.95rem;}
 
-    nav ul{display:flex; gap:16px; list-style:none; padding:0; margin:0;}
+    nav ul{display:flex; gap:16px; list-style:none;}
     nav a{
       text-decoration:none;
       color:var(--primary);
@@ -68,10 +66,10 @@
       padding:10px 14px;
       font-weight:500;
       transition:all .3s ease;
+      display:inline-block;
     }
     nav a:hover{border-color:var(--primary); box-shadow:var(--glow);}
 
-    /* === SECTIONS === */
     .about, .hero, .card{
       background:var(--panel);
       border:1px solid var(--border);
@@ -82,25 +80,21 @@
     .about{padding:30px; margin-bottom:60px;}
     .about h2{margin-bottom:15px; color:var(--primary);}
 
-    .hero{padding:30px; margin-bottom:50px;}
-    .hero h2{font-size:1.8rem; color:var(--primary); margin-bottom:10px;}
-    .hero p{color:var(--text); margin-bottom:20px;}
-
-    .cta{
-      display:inline-block;
-      background:var(--primary);
-      color:#fff;
-      padding:12px 20px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:600;
-      transition:background-color .3s ease;
-    }
-    .cta:hover{background:var(--primary-2);}
-
     /* === PORTFOLIO === */
-    .portfolio-section h2{text-align:center; color:var(--primary); margin-bottom:40px;}
-    .articles-grid{display:grid; gap:25px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+    .portfolio-section h2{
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 60px;
+      letter-spacing: 0.02em;
+    }
+
+    .articles-grid{
+      display:grid;
+      gap:25px;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    }
 
     .card{
       padding:25px;
@@ -146,9 +140,6 @@
       letter-spacing:.1px;
     }
 
-    .date{ color:#9097A1; font-size:.9rem; }
-
-    /* === Boutons remplis bleu nuit === */
     .btn-link{
       background:var(--primary);
       color:#fff;
@@ -160,10 +151,48 @@
       line-height:1.1;
       text-decoration:none;
       transition:all .3s ease;
+      white-space:nowrap;
     }
     .btn-link:hover{background:var(--primary-2); border-color:var(--primary-2); box-shadow:0 6px 18px rgba(31,42,68,.12);}
 
-    footer{text-align:center; margin-top:60px; padding-top:40px; border-top:2px solid var(--border); color:var(--muted);}
+    /* === ÉTUDE DE CAS (bloc dédié) === */
+    .case-study{
+      margin-top: 45px;
+      padding: 30px;
+      border-top: 2px solid var(--border);
+    }
+    .case-study h3{
+      color: var(--primary);
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+    .case-study p{margin-bottom: 14px;}
+    .case-study ul{
+      margin-left: 18px;
+      margin-bottom: 16px;
+    }
+    .case-study li{margin: 6px 0;}
+    .disclaimer{
+      font-size: .9em;
+      color: var(--muted);
+    }
+
+    /* === Services === */
+    #services h2 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:60px;
+      padding-top:40px;
+      border-top:2px solid var(--border);
+      color:var(--muted);
+    }
+
     .contact-btn{
       display:inline-block;
       margin-top:20px;
@@ -171,53 +200,19 @@
       background:var(--primary);
       color:white;
       text-decoration:none;
-      border-radius:6px;
-      font-weight:500;
+      border-radius:10px;
+      font-weight:600;
+      transition: background-color .3s ease;
     }
     .contact-btn:hover{background:var(--primary-2);}
-    /* Ajustement du titre "Mes réalisations" uniquement */
-.portfolio-section h2 {
-  font-size: 2.4rem;       
-  font-weight: 700;
-  color: var(--primary);
-  text-align: center;
-  margin-bottom: 60px;
-  letter-spacing: 0.02em;
-}
-/* Section Services */
-#services h2 {
-  text-align: center;
-  color: var(--primary);
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
 
-#services .articles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-}
-
-#services .card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-}
-
-#services .card h3 {
-  color: var(--primary);
-  margin-bottom: 10px;
-}
-
-#services .card p {
-  color: var(--text);
-  line-height: 1.6;
-}
-
+    @media (max-width: 700px){
+      header{flex-direction:column; align-items:flex-start;}
+      nav ul{flex-wrap:wrap;}
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -242,154 +237,118 @@
 
     <section id="realisations" class="portfolio-section">
       <h2>Mes réalisations</h2>
-      <div class="articles-grid">
 
+      <div class="articles-grid">
         <!-- Article 1 -->
         <article class="card">
-          <div class="meta">
-            <span class="tag">Musique</span>
-          </div>
+          <div class="meta"><span class="tag">Musique</span></div>
           <h3>5 étapes pour réussir son mastering audio</h3>
           <p>Guide pratique pour finaliser un morceau prêt à diffuser : préparation, ajustements, export et validation.</p>
           <div class="foot">
-            <div class="foot-left">
-             
-            </div>
-            <a href="https://www.deviation-records.com/2025/08/13/5-etapes-mastering-audio/" class="btn-link" target="_blank">Lire l’article</a>
+            <div class="foot-left"></div>
+            <a href="https://www.deviation-records.com/2025/08/13/5-etapes-mastering-audio/" class="btn-link" target="_blank" rel="noopener noreferrer">Lire l’article</a>
           </div>
         </article>
 
         <!-- Article 2 -->
         <article class="card">
-          <div class="meta">
-            <span class="tag">Technique</span>
-          </div>
+          <div class="meta"><span class="tag">Technique</span></div>
           <h3>Erreur 504 : diagnostic et solutions</h3>
           <p>Un article pédagogique qui explique les causes, impacts et résolutions d’une erreur 504, avec conseils actionnables.</p>
           <div class="foot">
-            <div class="foot-left">
-              <span class="note-client">Contenu intégré par le client</span>
-             
-            </div>
-            <a href="https://www.business-aptitude.com/erreur-504/" class="btn-link" target="_blank">Lire l’article</a>
+            <div class="foot-left"><span class="note-client">Contenu intégré par le client</span></div>
+            <a href="https://www.business-aptitude.com/erreur-504/" class="btn-link" target="_blank" rel="noopener noreferrer">Lire l’article</a>
           </div>
         </article>
 
         <!-- Article 3 -->
         <article class="card">
-          <div class="meta">
-            <span class="tag">Services</span>
-          </div>
+          <div class="meta"><span class="tag">Services</span></div>
           <h3>Détectives privés à Saint-Tropez</h3>
           <p>Présentation claire des prestations d’enquête et rappels légaux pour les particuliers et professionnels.</p>
           <div class="foot">
-            <div class="foot-left">
-              <span class="note-client">Contenu intégré par le client</span>
-             
-            </div>
-            <a href="https://www.astrategie.com/nos-agences/agence-detectives-st-tropez/" class="btn-link" target="_blank">Lire l’article</a>
+            <div class="foot-left"><span class="note-client">Contenu intégré par le client</span></div>
+            <a href="https://www.astrategie.com/nos-agences/agence-detectives-st-tropez/" class="btn-link" target="_blank" rel="noopener noreferrer">Lire l’article</a>
           </div>
         </article>
 
         <!-- Article 4 -->
         <article class="card">
-          <div class="meta">
-            <span class="tag">Musique</span>
-          </div>
+          <div class="meta"><span class="tag">Musique</span></div>
           <h3>Soutenir les labels indépendants : pourquoi et comment</h3>
           <p>Un article engagé qui met en lumière le rôle essentiel des labels indés et propose des pistes concrètes pour les soutenir.</p>
           <div class="foot">
-            <div class="foot-left">
-              
-            </div>
-            <a href="https://www.deviation-records.com/2025/05/28/soutenir-labels-independants/" class="btn-link" target="_blank">Lire l’article</a>
+            <div class="foot-left"></div>
+            <a href="https://www.deviation-records.com/2025/05/28/soutenir-labels-independants/" class="btn-link" target="_blank" rel="noopener noreferrer">Lire l’article</a>
           </div>
         </article>
 
         <!-- Article 5 -->
         <article class="card">
-          <div class="meta">
-            <span class="tag">Production</span>
-          </div>
+          <div class="meta"><span class="tag">Production</span></div>
           <h3>Le rôle de l’ingénieur du son</h3>
           <p>De l’enregistrement au mastering : éclairage sur un métier clé qui façonne la couleur et la qualité d’un disque.</p>
           <div class="foot">
-            <div class="foot-left">
-             
-            </div>
-            <a href="https://www.deviation-records.com/2025/07/11/le-role-de-l-ingenieur-du-son/" class="btn-link" target="_blank">Lire l’article</a>
+            <div class="foot-left"></div>
+            <a href="https://www.deviation-records.com/2025/07/11/le-role-de-l-ingenieur-du-son/" class="btn-link" target="_blank" rel="noopener noreferrer">Lire l’article</a>
           </div>
         </article>
 
         <!-- Article 6 -->
         <article class="card">
-          <div class="meta">
-            <span class="tag">Culture</span>
-          </div>
+          <div class="meta"><span class="tag">Culture</span></div>
           <h3>Pourquoi écouter un album en entier à l’ère du streaming</h3>
           <p>Une invitation à reprendre le temps d’écouter : contexte, intentions artistiques et expérience complète de l’album.</p>
           <div class="foot">
-            <div class="foot-left">
-             
-            </div>
-            <a href="https://www.deviation-records.com/2025/07/11/ecouter-un-album-en-entier-streaming/" class="btn-link" target="_blank">Lire l’article</a>
+            <div class="foot-left"></div>
+            <a href="https://www.deviation-records.com/2025/07/11/ecouter-un-album-en-entier-streaming/" class="btn-link" target="_blank" rel="noopener noreferrer">Lire l’article</a>
           </div>
         </article>
-        <section id="etude-cas-cyber" style="border-top:2px solid #ddd; margin-top:3rem; padding-top:2rem;">
-  <h2>Étude de cas — Cybersécurité</h2>
+      </div>
 
-  <p>
-    Analyse de contenu & SEO orientée <strong>clarté</strong>,
-    <strong>crédibilité</strong> et <strong>conversion</strong>
-    pour un site B2B en cybersécurité
-    <em>(cas pédagogique anonymisé)</em>.
-  </p>
+      <!-- ✅ Étude de cas : hors de la grille, rendu clean -->
+      <section id="etude-cas-cyber" class="about case-study">
+        <h3>Étude de cas — Cybersécurité</h3>
+        <p>
+          Analyse de contenu & SEO orientée <strong>clarté</strong>, <strong>crédibilité</strong> et <strong>conversion</strong>
+          pour un site B2B en cybersécurité <em>(cas pédagogique anonymisé)</em>.
+        </p>
+        <ul>
+          <li>Audit de page d’accueil (positionnement, messages, preuves, parcours)</li>
+          <li>Audit de page solution (scanner de vulnérabilités)</li>
+          <li>Recommandations éditoriales et business priorisées</li>
+        </ul>
+        <p>
+          👉 <a class="btn-link" href="https://eo-redactrice-web.github.io/cas-etude-cyber/" target="_blank" rel="noopener noreferrer">
+            Voir l’étude de cas complète
+          </a>
+        </p>
+        <p class="disclaimer">
+          Cas réalisé à des fins de démonstration de méthodologie. Aucune collaboration commerciale avec l’entreprise analysée.
+        </p>
+      </section>
 
-  <ul>
-    <li>Audit de page d’accueil (positionnement, messages, preuves, parcours)</li>
-    <li>Audit de page solution (scanner de vulnérabilités)</li>
-    <li>Recommandations éditoriales et business priorisées</li>
-  </ul>
+    </section>
 
-  <p>
-    👉
-    <a
-      href="https://eo-redactrice-web.github.io/cas-etude-cyber/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Voir l’étude de cas complète
-    </a>
-  </p>
+    <section id="services" class="about">
+      <h2>Services proposés</h2>
+      <div class="articles-grid">
+        <article class="card">
+          <h3>Articles SEO complets</h3>
+          <p>Recherche d’intention, plan structuré Hn, sources fiables, métadonnées optimisées.</p>
+        </article>
 
-  <p style="font-size: 0.9em; color: #666;">
-    Cas réalisé à des fins de démonstration de méthodologie.
-    Aucune collaboration commerciale avec l’entreprise analysée.
-  </p>
-</section>
+        <article class="card">
+          <h3>Pages de site efficaces</h3>
+          <p>Pages Services, À propos ou FAQ : optimisation du contenu pour la clarté, la cohérence et le référencement.</p>
+        </article>
 
-
+        <article class="card">
+          <h3>Optimisation on-page</h3>
+          <p>Réécriture, enrichissement sémantique, liens internes, amélioration de la lisibilité et contrôle technique léger (performances, balisage, métadonnées).</p>
+        </article>
       </div>
     </section>
-<section id="services" class="about">
-  <h2>Services proposés</h2>
-  <div class="articles-grid">
-    <article class="card">
-      <h3>Articles SEO complets</h3>
-      <p>Recherche d’intention, plan structuré Hn, sources fiables, métadonnées optimisées.</p>
-    </article>
-
-    <article class="card">
-      <h3>Pages de site efficaces</h3>
-      <p>Pages Services, À propos ou FAQ : optimisation du contenu pour la clarté, la cohérence et le référencement.</p>
-    </article>
-
-    <article class="card">
-      <h3>Optimisation on-page</h3>
-      <p>Réécriture, enrichissement sémantique, liens internes, amélioration de la lisibilité et contrôle technique léger (performances, balisage, métadonnées).</p>
-    </article>
-  </div>
-</section>
 
     <section id="contact" class="about">
       <h2>Parlons de votre contenu</h2>
@@ -399,7 +358,6 @@
 
     <footer>
       <p>© 2025 — Emmanuelle Ouine. Tous droits réservés.</p>
-     
     </footer>
   </div>
 </body>
