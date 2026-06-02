@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eo-redactrice-web.github.io/mon-portfolio/sitemap.xml
