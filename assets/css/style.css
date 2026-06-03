@@ -1027,3 +1027,68 @@ select {
   outline-offset: 3px;
   border-radius: 4px;
 }
+/* =================================================================
+   17. CARTE ÉTUDE DE CAS SIMPLE (section 04)
+   ================================================================= */
+
+.case-simple {
+  max-width: 640px;
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--t);
+}
+
+.case-simple:hover {
+  border-color: var(--color-border-strong);
+}
+
+.case-simple-head {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.case-simple-head .case-tag {
+  color: var(--color-accent);
+}
+
+.case-simple-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.case-simple-desc {
+  color: var(--color-text-soft);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  margin-bottom: var(--space-3);
+}
+
+.case-simple-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  background: var(--color-accent-dim);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  color: var(--color-accent);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: background var(--t-fast), color var(--t-fast), gap var(--t-fast);
+}
+
+.case-simple-cta:hover {
+  background: var(--color-accent);
+  color: #04211b;
+  gap: 0.75rem;
+}
