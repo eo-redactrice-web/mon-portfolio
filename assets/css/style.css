@@ -1290,3 +1290,159 @@ select {
   color: var(--color-text);
   margin: 0;
 }
+
+
+/* =================================================================
+   19. PAGE ARTICLE (articles/*.html)
+   Réutilise au maximum les composants existants. N'ajoute que les
+   styles strictement nécessaires non couverts par le portfolio.
+   ================================================================= */
+
+/* En-tête article (hérite du même esprit que .case-hero) */
+.article-hero {
+  padding-block: clamp(3rem, 8vw, 6rem) clamp(2rem, 5vw, 3rem);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.article-hero-title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-4);
+  max-width: 26ch;
+}
+
+/* Métadonnées (date, lecture, catégorie) — variante de .case-hero-meta */
+.article-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2) var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  max-width: 540px;
+}
+
+@media (min-width: 720px) {
+  .article-meta {
+    grid-template-columns: repeat(3, auto);
+    gap: var(--space-5);
+  }
+}
+
+.article-meta li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.article-meta .meta-key {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.article-meta li > span:last-child {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+}
+
+/* Corps article (utilise déjà .case-container pour la largeur de lecture) */
+.article-body {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.article-section {
+  margin-bottom: var(--space-6);
+}
+
+.article-section h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--color-text);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.article-section h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-accent);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.article-section p {
+  color: var(--color-text-soft);
+  line-height: 1.75;
+  margin-bottom: var(--space-2);
+  font-size: 1rem;
+}
+
+/* Liens externes inline dans le texte — soulignement discret cyan */
+.article-content a[href^="http"] {
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-accent-dim);
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+
+.article-content a[href^="http"]:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* Mots en gras — un peu plus clairs que le texte courant, pas en cyan */
+.article-content strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* Encadré "En bref" en tête d'article (chapeau GEO) */
+.article-summary-geo {
+  margin-bottom: var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-bg-card);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius);
+}
+
+.article-summary-label {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.article-summary-geo p:not(.article-summary-label) {
+  color: var(--color-text);
+  line-height: 1.65;
+  font-size: 0.9375rem;
+  margin-bottom: 0;
+}
+
+/* Listes dans le résumé final ("Ce qu'il faut retenir") */
+.article-list-summary {
+  margin-block: var(--space-2);
+}
+
+/* Mention légale (article test) */
+.article-legal {
+  margin-top: var(--space-5);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--color-border);
+}
+
+.article-legal p {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
