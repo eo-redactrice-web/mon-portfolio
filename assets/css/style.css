@@ -1385,14 +1385,17 @@ select {
 }
 
 /* Liens externes inline dans le texte — soulignement discret cyan */
-.article-content a[href^="http"] {
-  color: var(--color-text);
-  border-bottom: 1px solid var(--color-accent-dim);
-  transition: color var(--t-fast), border-color var(--t-fast);
+.article-content p a,
+.article-content p a:link,
+.article-content p a:visited {
+  color: var(--color-text) !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(94, 234, 212, 0.4);
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.article-content a[href^="http"]:hover {
-  color: var(--color-accent);
+.article-content p a:hover {
+  color: var(--color-accent) !important;
   border-bottom-color: var(--color-accent);
 }
 
