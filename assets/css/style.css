@@ -1449,3 +1449,16 @@ select {
   text-align: center;
   margin: 0;
 }
+
+/* Images intégrées à l'article */
+.article-figure {
+  margin: var(--space-4) 0;
+}
+
+.article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
