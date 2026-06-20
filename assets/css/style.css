@@ -1462,3 +1462,101 @@ select {
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
 }
+/* =================================================================
+   20. ENCADRÉ DÉFINITION (article EDR et autres définitions)
+   Style différencié de l'encadré "En bref" (article-summary-geo)
+   pour ne pas créer de confusion visuelle.
+   ================================================================= */
+
+.article-definition {
+  margin-block: var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-bg-card);
+  border: 1px solid rgba(94, 234, 212, 0.25);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.article-definition-label {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.article-definition-term {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+}
+
+.article-definition p:last-child {
+  color: var(--color-text-soft);
+  line-height: 1.7;
+  font-size: 0.9375rem;
+  margin-bottom: 0;
+}
+
+/* =================================================================
+   21. TABLEAU COMPARATIF DANS L'ARTICLE
+   Responsive : scroll horizontal sur mobile pour éviter de casser
+   la mise en page.
+   ================================================================= */
+
+.article-table-wrapper {
+  margin-block: var(--space-4);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.article-table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.article-table thead {
+  background: rgba(94, 234, 212, 0.06);
+}
+
+.article-table th {
+  padding: var(--space-3) var(--space-3);
+  text-align: left;
+  font-weight: 500;
+  color: var(--color-accent);
+  font-size: 0.9375rem;
+  border-bottom: 1px solid rgba(94, 234, 212, 0.25);
+}
+
+.article-table td {
+  padding: var(--space-3);
+  color: var(--color-text-soft);
+  line-height: 1.55;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.article-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.article-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.article-table td + td {
+  border-left: 1px solid var(--color-border);
+}
+
+.article-table th + th {
+  border-left: 1px solid rgba(94, 234, 212, 0.25);
+}
+
