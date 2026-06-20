@@ -1560,3 +1560,46 @@ select {
   border-left: 1px solid rgba(94, 234, 212, 0.25);
 }
 
+/* =================================================================
+   22. AMÉLIORATIONS LECTURE & PROTECTION ARTICLES
+   - Justification du texte sur desktop avec césures automatiques
+   - En-têtes du tableau comparatif centrés
+   - Désactivation de la sélection du texte (anti-copie)
+   ================================================================= */
+
+/* ----- Justification responsive avec césures ----- */
+/* Sur mobile (< 720px) : alignement à gauche (évite les rivières blanches sur colonne étroite) */
+/* Sur desktop (≥ 720px) : justification avec césures automatiques en français */
+
+@media (min-width: 720px) {
+  .article-content p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    text-wrap: pretty;
+  }
+}
+
+/* ----- En-têtes du tableau comparatif centrés ----- */
+
+.article-table th {
+  text-align: center;
+}
+
+/* ----- Protection anti-copie soft (sélection désactivée) ----- */
+/* Appliqué uniquement sur le contenu des articles, pas sur le reste du portfolio */
+
+.article-content,
+.article-content * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Indiquer visuellement que la sélection n'est pas possible */
+.article-content {
+  -webkit-touch-callout: none;
+}
+
