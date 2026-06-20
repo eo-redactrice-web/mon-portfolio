@@ -574,5 +574,28 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <!-- Protection anti-copie : désactivation du clic droit + watermark sur copie -->
+<script>
+  (function() {
+    var articleContent = document.querySelector('.article-content');
+    if (!articleContent) return;
+
+    // Désactiver le clic droit (menu contextuel) sur le contenu de l'article
+    articleContent.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // Si quelqu'un parvient malgré tout à copier (vue lecteur, navigateur permissif),
+    // ajouter automatiquement une mention de source au texte copié
+    articleContent.addEventListener('copy', function(e) {
+      var selection = document.getSelection().toString();
+      if (!selection) return;
+      var source = '\n\n— Source : ' + window.location.href + '\n© Emmanuelle Ouine — Tous droits réservés';
+      e.clipboardData.setData('text/plain', selection + source);
+      e.preventDefault();
+    });
+  })();
+</script>
+
 </body>
 </html>
