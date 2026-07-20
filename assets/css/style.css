@@ -1591,7 +1591,9 @@ select {
 /* Appliqué uniquement sur le contenu des articles, pas sur le reste du portfolio */
 
 .article-content,
-.article-content * {
+.article-content *,
+.case-container,
+.case-container * {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
