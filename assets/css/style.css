@@ -193,8 +193,9 @@ select {
   margin-bottom: var(--space-3);
 }
 
-.col-content p.quiet {
+.col-content p.quiet:first-of-type {
   margin-top: var(--space-4);
+
 }
 
 .quiet {
