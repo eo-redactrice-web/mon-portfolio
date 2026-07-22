@@ -197,6 +197,9 @@ select {
   margin-top: var(--space-4);
 
 }
+.col-content {
+  text-align: justify;
+}
 
 .quiet {
   color: var(--color-text-muted);
