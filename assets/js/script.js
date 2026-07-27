@@ -91,13 +91,19 @@
     });
   });
 
-  /* ===============================================================
-     5. FORMULAIRE DE CONTACT (mailto fallback)
+ /* ===============================================================
+     5. FORMULAIRE DE CONTACT (EmailJS)
      =============================================================== */
   const form = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
 
-  if (form) {
+  if (form && window.emailjs) {
+    emailjs.init({ publicKey: 'Ws612g9URGSJzOqOw' });
+
+    const EMAILJS_SERVICE_ID = 'service_qc7vs2l';
+    const EMAILJS_TEMPLATE_NOTIFICATION = 'template_n9iit7b';
+    const EMAILJS_TEMPLATE_AUTOREPLY = 'template_nu39eo9';
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -107,33 +113,46 @@
       const type = form.querySelector('#f-type').value;
       const message = form.querySelector('#f-message').value.trim();
 
-      if (!name || !email || !message) {
-        formStatus.textContent = '// merci de remplir les champs obligatoires';
+      if (!name || !email) {
         formStatus.style.color = '#f87171';
+        formStatus.textContent = '// merci de remplir les champs obligatoires';
         return;
       }
 
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
-        formStatus.textContent = '// adresse email invalide';
         formStatus.style.color = '#f87171';
+        formStatus.textContent = '// adresse email invalide';
         return;
       }
 
-      const subject = encodeURIComponent(`[Portfolio] Projet ${type}, de ${name}`);
-      const body = encodeURIComponent(
-        `Nom : ${name}\n` +
-        `Entreprise : ${company || 'non renseignée'}\n` +
-        `Email : ${email}\n` +
-        `Type de projet : ${type}\n\n` +
-        `Message :\n${message}`
-      );
-
-      const recipient = 'e.o.redactriceweb@gmail.com';
-      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
       formStatus.style.color = '';
-      formStatus.textContent = '// votre client mail va s\'ouvrir…';
+      formStatus.textContent = '// envoi en cours…';
+
+      const templateParams = {
+        name: name,
+        company: company || 'non renseignée',
+        email: email,
+        type: type,
+        message: message || 'non renseigné',
+      };
+
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_NOTIFICATION, templateParams)
+        .then(() => emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_AUTOREPLY, templateParams))
+        .then(() => {
+          formStatus.style.color = '';
+          formStatus.textContent = '// message envoyé, vous recevrez une confirmation par email';
+          form.reset();
+        })
+        .catch(() => {
+          formStatus.style.color = '#f87171';
+          formStatus.textContent = '// une erreur est survenue, réessayez ou écrivez-moi directement par email';
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+        });
     });
   }
 
