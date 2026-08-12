@@ -176,10 +176,14 @@ select {
   gap: var(--space-5);
 }
 
-@media (min-width: 800px) {
-  .two-col {
-    grid-template-columns: 220px 1fr;
-    gap: var(--space-6);
+@media (min-width: 720px) {
+  .article-content p {
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    text-wrap: pretty;
   }
 }
 
