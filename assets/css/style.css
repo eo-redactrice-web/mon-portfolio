@@ -176,17 +176,6 @@ select {
   gap: var(--space-5);
 }
 
-@media (min-width: 720px) {
-  .article-content p {
-    text-align: justify;
-    text-align-last: left;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    text-wrap: pretty;
-  }
-}
-
 .lead {
   font-size: 1.125rem;
   color: var(--color-text);
@@ -1590,6 +1579,7 @@ select {
 @media (min-width: 720px) {
   .article-content p {
     text-align: justify;
+    text-align-last: left;
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
@@ -1679,4 +1669,13 @@ select {
   color: var(--color-text-soft);
   line-height: 1.7;
   margin: 0;
+}
+
+/* =================================================================
+   24. CORRECTIF ENCADRÉ "EN BREF" — dernière ligne étirée sur Chrome
+   ================================================================= */
+
+.article-summary-geo p:not(.article-summary-label) {
+  text-align: left !important;
+  text-wrap: normal !important;
 }
