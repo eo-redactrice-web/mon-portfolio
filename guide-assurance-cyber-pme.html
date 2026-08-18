@@ -1,1 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090b">
+<title>Assurance cyber pour PME : bien se préparer avant de souscrire | EO Rédaction web</title>
+<meta name="description" content="Garanties, exclusions, prérequis techniques et règle des 72 h : le guide pour préparer la souscription d'une assurance cyber pour une PME.">
+<meta name="author" content="Emmanuelle Ouine">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="canonical" href="https://eo-redactrice-web.github.io/mon-portfolio/guide-assurance-cyber-pme.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Assurance cyber pour PME : bien se préparer avant de souscrire">
+<meta property="og:description" content="Garanties, exclusions, prérequis techniques et règle des 72 h : le guide pour préparer la souscription d'une assurance cyber pour une PME.">
+<meta property="og:url" content="https://eo-redactrice-web.github.io/mon-portfolio/guide-assurance-cyber-pme.html">
+<meta property="og:image" content="https://eo-redactrice-web.github.io/mon-portfolio/assets/img/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2308090b'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='18' font-weight='700' fill='%235eead4' text-anchor='middle'%3E%2F%2F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* --- À AJUSTER SUR TA CHARTE --- */
+    --accent:#5eead4;                                        /* accent réel du portfolio */
+    --font-display:"Geist", system-ui, sans-serif;           /* titres */
+    --font-serif:"Instrument Serif", Georgia, serif;         /* accents italiques dans les titres */
+    --font-body:"Geist", system-ui, sans-serif;              /* corps */
+    --font-mono:"JetBrains Mono", ui-monospace, monospace;   /* libellés // */
+    /* -------------------------------- */
+
+    --bg:#08090b;
+    --surface:#101318;
+    --surface-2:#151920;
+    --line:#20242C;
+    --line-2:#2B313A;
+    --text:#D2D4CF;
+    --bright:#F4F5F2;
+    --muted:#848B95;
+    --accent-soft:rgba(79,209,197,.12);
+    --maxw:760px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:var(--font-body);font-size:17px;line-height:1.75;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  a{color:inherit}
+  strong,b{color:var(--bright);font-weight:600}
+
+  .eyebrow{
+    font-family:var(--font-mono);font-size:.74rem;letter-spacing:.02em;
+    color:var(--accent);margin:0 0 14px;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  /* ---- TOP BAR ---- */
+  .topbar{border-bottom:1px solid var(--line)}
+  .topbar__in{
+    max-width:var(--maxw);margin:0 auto;padding:18px 22px;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  }
+  .brand{font-family:var(--font-mono);font-size:.86rem;color:var(--bright);text-decoration:none}
+  .brand::before{content:"// ";color:var(--accent)}
+  .topnav{display:flex;gap:20px;font-family:var(--font-mono);font-size:.76rem}
+  .topnav a{color:var(--muted);text-decoration:none;transition:color .2s}
+  .topnav a:hover{color:var(--accent)}
+
+  /* ---- HEADER ---- */
+  header.doc{padding:58px 0 8px}
+  header.doc h1{
+    font-family:var(--font-display);font-weight:600;
+    font-size:clamp(1.95rem,5.2vw,3rem);line-height:1.1;letter-spacing:-.015em;
+    color:var(--bright);margin:0 0 26px;
+  }
+  header.doc h1 em{color:var(--accent);font-style:italic;font-family:var(--font-serif);font-weight:400}
+  .meta{
+    display:flex;flex-wrap:wrap;gap:8px 26px;padding:18px 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:var(--font-mono);font-size:.72rem;color:var(--muted);
+  }
+  .meta b{color:var(--text);font-weight:500}
+  .demo-chip{
+    display:inline-block;margin-top:22px;
+    font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--line-2);border-radius:3px;padding:5px 10px;
+  }
+
+  /* ---- EN BREF ---- */
+  .enbref{
+    margin:38px 0 8px;padding:24px 26px;
+    background:var(--surface);border:1px solid var(--line);border-left:2px solid var(--accent);border-radius:6px;
+  }
+  .enbref p{margin:0;font-size:1.02rem;line-height:1.7}
+
+  /* ---- SOMMAIRE ---- */
+  .toc{margin:40px 0;padding:26px 28px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+  .toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+  .toc li{counter-increment:t;border-top:1px solid var(--line);padding:11px 0}
+  .toc li:first-child{border-top:none;padding-top:0}
+  .toc li:last-child{padding-bottom:0}
+  .toc a{display:flex;gap:14px;align-items:baseline;text-decoration:none;color:var(--text);font-weight:500}
+  .toc a::before{content:counter(t,decimal-leading-zero);font-family:var(--font-mono);font-size:.78rem;color:var(--accent)}
+  .toc a:hover{color:var(--accent)}
+  .toc .sub{margin:6px 0 0 32px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted)}
+
+  /* ---- SECTIONS ---- */
+  section.part{padding:52px 0 4px;border-top:1px solid var(--line);margin-top:44px}
+  section.part h2{
+    font-family:var(--font-display);font-weight:600;
+    font-size:clamp(1.45rem,3.6vw,1.9rem);line-height:1.2;letter-spacing:-.01em;
+    color:var(--bright);margin:0 0 22px;
+  }
+  section.part h3{font-size:1.05rem;font-weight:700;color:var(--bright);margin:32px 0 12px}
+  section.part p{margin:0 0 18px}
+
+  /* ---- PANELS couvert/exclu ---- */
+  .panels{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0}
+  @media(min-width:600px){.panels{grid-template-columns:1fr 1fr}}
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px}
+  .panel__h{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--line)}
+  .panel--ok .panel__h{color:var(--accent)}
+  .panel--no .panel__h{color:#C98A57}
+  .panel ul{list-style:none;margin:0;padding:0}
+  .panel li{position:relative;padding:7px 0 7px 22px;font-size:.95rem;line-height:1.5;border-top:1px solid var(--line)}
+  .panel li:first-child{border-top:none}
+  .panel--ok li::before{content:"+";position:absolute;left:2px;color:var(--accent);font-weight:700}
+  .panel--no li::before{content:"–";position:absolute;left:4px;color:#C98A57;font-weight:700}
+
+  /* ---- SOCLE (controls) ---- */
+  .socle{margin:22px 0;border-top:1px solid var(--line)}
+  .item{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .item__n{font-family:var(--font-mono);font-size:.82rem;color:var(--accent);padding-top:3px}
+  .item p{margin:0}
+  .item b{display:block;margin-bottom:4px}
+
+  /* ---- CALLOUT ---- */
+  .callout{background:var(--surface);border:1px solid var(--line);border-left:2px solid #C98A57;border-radius:6px;padding:18px 22px;margin:22px 0}
+  .callout .k{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:#C98A57;display:block;margin-bottom:8px}
+  .callout p{margin:0}
+  .callout p+p{margin-top:10px}
+
+  /* ---- STRUCTURE card ---- */
+  .struct{background:var(--surface-2);border:1px dashed var(--line-2);border-radius:6px;padding:20px 22px}
+  .struct .flag{display:inline-block;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line-2);border-radius:3px;padding:3px 8px;margin-bottom:12px}
+  .struct p{margin:0 0 10px;color:var(--muted);font-size:.96rem}
+  .struct ul{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:.94rem}
+  .struct li{margin:4px 0}
+  .src{font-family:var(--font-mono);font-size:.72em;color:#C98A57;background:rgba(201,138,87,.1);border-radius:3px;padding:1px 6px;white-space:nowrap}
+
+  /* ---- RETENIR ---- */
+  .retenir{margin:52px 0 0;padding:26px 28px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+  .retenir ul{margin:8px 0 0;padding-left:20px}
+  .retenir li{margin:8px 0}
+
+  /* ---- COLOPHON ---- */
+  .colophon{margin-top:52px;padding-top:34px;border-top:1px solid var(--line)}
+  .disclaimer{font-size:.9rem;color:var(--muted);font-style:italic;margin:0 0 26px}
+  .sources h4{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+  .sources ul{list-style:none;margin:0;padding:0}
+  .sources li{padding:9px 0;border-top:1px solid var(--line);font-size:.9rem;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:baseline}
+  .sources li:first-child{border-top:none}
+  .sources a{color:var(--accent);text-decoration:none}
+  .sources a:hover{text-decoration:underline}
+  .sources .tag{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);white-space:nowrap}
+
+  /* ---- FOOTER ---- */
+  footer.site{border-top:1px solid var(--line);margin-top:56px}
+  footer.site .in{max-width:var(--maxw);margin:0 auto;padding:34px 22px 48px}
+  footer.site .b{font-family:var(--font-mono);color:var(--bright);margin-bottom:6px}
+  footer.site .b::before{content:"// ";color:var(--accent)}
+  footer.site .tag{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+  footer.site nav{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--font-mono);font-size:.76rem}
+  footer.site nav a{color:var(--muted);text-decoration:none}
+  footer.site nav a:hover{color:var(--accent)}
+  footer.site .copy{margin-top:20px;font-family:var(--font-mono);font-size:.7rem;color:var(--muted)}
+
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  @media print{
+    :root{--bg:#fff;--surface:#f6f6f4;--surface-2:#f6f6f4;--text:#1a1a1a;--bright:#000;--muted:#555;--line:#ccc;--line-2:#bbb}
+    body{font-size:11pt}.topbar,.topnav,.demo-chip,footer.site{display:none}
+  }
+
+  /* ---- PROTECTION ANTI-COPIE (cohérent avec le reste du portfolio) ---- */
+  .article-content,
+  .article-content *{
+    -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;
+    -webkit-touch-callout:none;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="index.html">EO Rédaction web</a>
+    <nav class="topnav">
+      <a href="index.html">← Retour au portfolio</a>
+      <a href="index.html#contact">Me contacter</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap article-content">
+  <header class="doc">
+    <p class="eyebrow">// Guide pratique · Cybersécurité B2B</p>
+    <h1>Assurance cyber pour PME : bien se préparer <em>avant de souscrire</em></h1>
+    <div class="meta">
+      <span>Format <b>Guide pratique</b></span>
+      <span>Lecture <b>~12 min</b></span>
+      <span>Public <b>Dirigeants &amp; DAF de PME</b></span>
+      <span>Mise à jour <b>Août 2026</b></span>
+    </div>
+    <span class="demo-chip">Démonstration éditoriale · sections balisées</span>
+  </header>
+
+  <!-- EN BREF -->
+  <div class="enbref">
+    <p class="eyebrow">// En bref</p>
+    <p>Souscrire une <strong>assurance cyber</strong> a de quoi rassurer. En réalité, elle ne fait que la moitié du chemin : elle prend en charge une partie du <strong>coût d'une attaque</strong>, mais seulement si votre entreprise a déjà mis en place un minimum de protections (MFA, sauvegardes isolées, EDR, correctifs à jour) et si vous respectez la <strong>règle des 72 heures</strong> le jour de l'incident. Tout se joue donc avant de signer : comprendre les <strong>garanties</strong>, repérer les <strong>exclusions</strong> qui vident un contrat de son intérêt, et préparer sereinement votre <strong>dossier d'assurabilité</strong>.</p>
+  </div>
+
+  <!-- SOMMAIRE -->
+  <nav class="toc" aria-label="Sommaire">
+    <p class="eyebrow">// Sommaire</p>
+    <ol>
+      <li><a href="#s1">Votre PME a-t-elle vraiment besoin d'une assurance cyber ?</a></li>
+      <li>
+        <a href="#s2">Ce que couvre, et ne couvre pas, une assurance cyber</a>
+        <div class="sub">garanties standards · exclusions fréquentes</div>
+      </li>
+      <li>
+        <a href="#s3">Les prérequis techniques : ce que l'assureur contrôle</a>
+        <div class="sub">socle technique · questionnaire d'assurabilité</div>
+      </li>
+      <li>
+        <a href="#s4">La règle des 72 heures</a>
+        <div class="sub">loi LOPMI · réponse à incident</div>
+      </li>
+      <li><a href="#s5">Combien coûte une assurance cyber ?</a></li>
+      <li><a href="#s6">Comment choisir : les critères qui comptent</a></li>
+      <li><a href="#s7">Questions fréquentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- S1 -->
+  <section class="part" id="s1">
+    <p class="eyebrow">// 01 · Pourquoi s'assurer</p>
+    <h2>Votre PME a-t-elle vraiment besoin d'une assurance cyber ?</h2>
+    <p>Pendant longtemps, les cyberattaques ont semblé réservées aux grands groupes. Ce n'est plus le cas, et les chiffres parlent d'eux-mêmes : d'après le <strong>Panorama de la cybermenace 2025 de l'ANSSI</strong>, les TPE, PME et ETI représentent désormais <strong>48 % des victimes de rançongiciels</strong>, contre 37 % un an plus tôt. Rien ne vous oblige à souscrire une assurance cyber. Mais dès lors que votre activité tient debout grâce à vos outils numériques, la question mérite que vous vous y arrêtiez, plutôt que de la repousser à plus tard.</p>
+    <div class="struct">
+      <span class="flag">// Structure — à développer</span>
+      <p>La partie complète traitera :</p>
+      <ul>
+        <li>le coût réel d'une attaque pour une PME, chiffres à l'appui</li>
+        <li>ce que l'assurance prend en charge, et ce qu'elle ne réparera jamais (arrêt d'activité, confiance abîmée)</li>
+        <li>assurance dédiée ou garantie incluse dans un contrat multirisque : ce qui change vraiment</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- S2 -->
+  <section class="part" id="s2">
+    <p class="eyebrow">// 02 · Couverture</p>
+    <h2>Ce que couvre, et ne couvre pas, une assurance cyber</h2>
+    <p>Deux contrats peuvent afficher le même prix et ne pas vous protéger de la même manière. La vraie différence se cache rarement dans les arguments mis en avant, et bien plus souvent dans les petites lignes. Avant même de comparer des offres, apprenez à repérer cette frontière entre ce qui est pris en charge et ce qui ne l'est pas. C'est souvent là, dans les <strong>exclusions</strong>, que se joue l'utilité réelle d'une police.</p>
+    <div class="panels">
+      <div class="panel panel--ok">
+        <div class="panel__h">Généralement couvert</div>
+        <ul>
+          <li>Frais de gestion et de notification d'une violation de données</li>
+          <li>Restauration du système d'information et des données</li>
+          <li>Pertes d'exploitation liées à l'arrêt d'activité</li>
+          <li>Expertise forensic et gestion de crise</li>
+          <li>Frais juridiques et de communication</li>
+          <li>Sous conditions, le paiement d'une rançon</li>
+        </ul>
+      </div>
+      <div class="panel panel--no">
+        <div class="panel__h">Exclusions fréquentes</div>
+        <ul>
+          <li>Vulnérabilité connue laissée non corrigée</li>
+          <li>Mesures déclarées mais absentes (MFA, sauvegardes, EDR)</li>
+          <li>Négligence ou erreur de configuration manifeste</li>
+          <li>Systèmes en fin de vie (Windows 7, par exemple)</li>
+          <li>Responsabilité civile, qui relève d'une autre garantie</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <span class="k">À vérifier ligne à ligne</span>
+      <p>Beaucoup de contrats ne vous indemnisent que si les mesures déclarées sont <strong>réellement en place</strong> le jour de l'attaque. Une case cochée un peu vite, par optimisme, et c'est toute la garantie qui peut tomber au pire moment.</p>
+    </div>
+  </section>
+
+  <!-- S3 -->
+  <section class="part" id="s3">
+    <p class="eyebrow">// 03 · Assurabilité</p>
+    <h2>Les prérequis techniques : ce que l'assureur contrôle avant de vous couvrir</h2>
+    <p>Il y a quelques années, souscrire une assurance cyber tenait sur une page. Aujourd'hui, le <strong>questionnaire d'assurabilité</strong> ressemble à un véritable audit de sécurité. Et ce que vous y déclarez n'a rien d'une formalité : l'assureur le vérifie, et il vous le rappellera le jour où vous ferez appel à lui. Une mesure annoncée mais absente au moment de l'attaque, et votre couverture peut se réduire à néant.</p>
+
+    <h3>Le socle technique devenu non négociable</h3>
+    <p>Six mesures reviennent dans presque tous les questionnaires. Aucune n'est là par hasard : chacune vient bloquer un <strong>mode d'attaque</strong> bien précis, et c'est justement ce qui explique l'insistance des assureurs.</p>
+    <div class="socle">
+      <div class="item"><div class="item__n">01</div><p><b>MFA sur les accès exposés</b>Les assureurs l'exigent sur la messagerie, les accès distants et, surtout, les <strong>comptes administrateurs</strong>. Ces trois portes concentrent le vol d'identifiants, qui reste le premier moyen d'entrée des attaquants. Le piège est classique : vous déclarez « MFA activée » alors que, dans les faits, seuls les dirigeants l'utilisent. Cet écart entre le papier et la réalité peut suffire à faire sauter la garantie.</p></div>
+      <div class="item"><div class="item__n">02</div><p><b>Sauvegardes isolées, immuables et testées</b>Une copie <strong>hors ligne ou immuable</strong> est aujourd'hui attendue, et pour une bonne raison : les rançongiciels récents s'en prennent d'abord aux sauvegardes accessibles en ligne, histoire de vous couper toute issue. Autre point souvent négligé : une sauvegarde jamais restaurée pour de vrai reste une simple promesse. C'est pourquoi les questionnaires posent désormais la question des <strong>tests de restauration</strong>.</p></div>
+      <div class="item"><div class="item__n">03</div><p><b>EDR ou MDR, pas un simple antivirus</b>La <strong>détection comportementale</strong> sur les postes et serveurs (EDR), idéalement supervisée en continu (MDR ou Micro-SOC), a pris le relais de l'antivirus de signature. L'idée n'est plus seulement de bloquer une menace connue, mais de repérer un comportement anormal et de l'endiguer avant qu'il ne tourne à l'incident majeur. Sans cette détection active, le refus d'indemnisation devient quasi systématique.</p></div>
+      <div class="item"><div class="item__n">04</div><p><b>Gestion des correctifs</b>C'est sans doute le point qui piège le plus d'entreprises. Un simple retard sur une <strong>faille déjà connue</strong> peut justifier un refus, et un système en fin de vie comme Windows 7 ferme carrément la porte à la souscription. Mieux vaut donc tenir un inventaire à jour de vos équipements et de leurs vulnérabilités que de corriger au coup par coup, dans l'urgence.</p></div>
+      <div class="item"><div class="item__n">05</div><p><b>Filtrage des e-mails et sensibilisation</b>L'e-mail reste l'une des portes d'entrée préférées des attaquants. La parade se joue à deux niveaux : un filtrage <strong>anti-phishing</strong> en amont, et des collaborateurs sensibilisés en aval. Négliger l'un des deux, c'est laisser la brèche ouverte.</p></div>
+      <div class="item"><div class="item__n">06</div><p><b>Segmentation et moindre privilège</b>Cloisonner votre réseau et limiter les droits d'administration empêche une intrusion isolée de gagner tout le <strong>système d'information</strong>. D'après les analyses de sinistres des assureurs, ces réflexes de bon sens, au même titre que la MFA, auraient permis d'éviter ou de contenir bon nombre d'incidents.</p></div>
+    </div>
+
+    <h3>Le questionnaire d'assurabilité : déclarer juste, prouver, tracer</h3>
+    <p>Bonne nouvelle : le problème des PME, ce n'est pas toujours l'absence de protections. Bien souvent, les mesures existent, mais les <strong>preuves sont éparpillées</strong>, incomplètes ou trop anciennes. Or une affirmation du type « nos sauvegardes sont testées » ne vaut que si vous pouvez la rattacher à un périmètre clair et à une trace récente : un rapport de sauvegarde, une capture de configuration, un inventaire, la liste des comptes à privilèges. C'est tout l'intérêt d'un audit, qui transforme vos déclarations en preuves solides.</p>
+    <p>Rassurez-vous, personne n'attend de vous une sécurité irréprochable. Ce que l'assureur cherche, c'est une <strong>image honnête et vérifiable</strong> de votre niveau réel. Et cela pèse directement sur la facture : un dossier bien étayé le met en confiance et allège la prime, quand un dossier flou la fait grimper, ou vous ferme la porte.</p>
+  </section>
+
+  <!-- S4 -->
+  <section class="part" id="s4">
+    <p class="eyebrow">// 04 · Obligation légale</p>
+    <h2>La règle des 72 heures : la clause qui peut annuler votre indemnisation</h2>
+    <p>Voici le point que la plupart des comparatifs passent sous silence, alors qu'il peut absolument tout changer. Votre contrat a beau être en règle, votre prime payée et vos garanties bien choisies : si vous ne déposez pas plainte à temps, l'assureur est en droit de ne rien vous verser.</p>
+
+    <h3>Ce que dit la loi LOPMI</h3>
+    <p>Depuis la <strong>loi LOPMI</strong>, une entreprise victime d'une cyberattaque n'est indemnisée que si elle a déposé plainte dans les <strong>72 heures</strong> suivant la découverte de l'incident. La règle est inscrite à l'article L.12-10-1 du Code des assurances. Elle ne concerne pas que le remboursement d'une éventuelle rançon : elle couvre l'ensemble de vos pertes et dommages. Et attention, un simple pré-dépôt de plainte ne suffit pas à la satisfaire.</p>
+
+    <div class="callout">
+      <span class="k">Obligation légale · 72 h</span>
+      <p>Le compte à rebours démarre dès que vous découvrez l'incident, pas une fois qu'il est réglé. La plainte se dépose auprès de la police, de la gendarmerie ou du procureur, et c'est à vous, en tant qu'assuré, d'en apporter la preuve.</p>
+    </div>
+
+    <h3>Comment l'intégrer à votre réponse à incident</h3>
+    <p>Ce réflexe ne s'improvise pas dans la panique du jour J, il se prépare tranquillement en amont. Deux décisions à prendre dès aujourd'hui. D'abord, désignez qui déclenche le dépôt de plainte, et sous quel délai interne. Ensuite, prévoyez d'activer sans attendre l'assistance incluse dans votre contrat : elle peut vous aider à qualifier l'incident et à monter le dossier pendant que le chrono tourne. Une entreprise qui a déjà répété ce scénario protège son indemnisation. Une entreprise prise de court la perd parfois pour un simple retard administratif.</p>
+  </section>
+
+  <!-- S5 -->
+  <section class="part" id="s5">
+    <p class="eyebrow">// 05 · Budget</p>
+    <h2>Combien coûte une assurance cyber ?</h2>
+    <div class="struct">
+      <span class="flag">// Structure — à développer</span>
+      <p>Cette partie expliquera ce qui fait varier la prime (chiffre d'affaires, secteur, maturité cyber, franchises et plafonds), sans fourchette inventée. Les ordres de grandeur seront ajoutés une fois sourcés et datés.</p>
+      <ul>
+        <li>ce qui pèse sur le prix, et ce qui le fait baisser</li>
+        <li>franchise, plafonds et sous-limites : les chiffres qui comptent vraiment</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- S6 -->
+  <section class="part" id="s6">
+    <p class="eyebrow">// 06 · Décision</p>
+    <h2>Comment choisir : les critères qui comptent</h2>
+    <div class="struct">
+      <span class="flag">// Structure — à développer</span>
+      <p>Une grille de lecture pour comparer sans se noyer : périmètre des garanties, exclusions, plafonds, qualité de l'assistance en cas de crise, et articulation avec vos mesures existantes. Format prévu : checklist de décision.</p>
+    </div>
+  </section>
+
+  <!-- S7 -->
+  <section class="part" id="s7">
+    <p class="eyebrow">// 07 · FAQ</p>
+    <h2>Questions fréquentes</h2>
+    <div class="struct">
+      <span class="flag">// Structure — à développer · balisage FAQPage</span>
+      <p>Bloc FAQ prévu avec données structurées schema.org/FAQPage : « L'assurance cyber est-elle obligatoire ? », « Suis-je assurable sans EDR ? », « L'assureur rembourse-t-il la rançon ? », « Que couvre-t-elle si l'attaque vient d'un sous-traitant ? ».</p>
+    </div>
+  </section>
+
+  <!-- CE QU'IL FAUT RETENIR -->
+  <div class="retenir">
+    <p class="eyebrow">// Ce qu'il faut retenir</p>
+    <ul>
+      <li>une assurance cyber ne vous protège vraiment que si les <strong>mesures déclarées sont bien en place</strong> ;</li>
+      <li>le questionnaire est devenu un audit : dites la vérité, et gardez de quoi la prouver ;</li>
+      <li>la <strong>règle des 72 heures</strong> conditionne votre indemnisation, préparez le dépôt de plainte à l'avance ;</li>
+      <li>les <strong>exclusions</strong> comptent autant que les garanties, prenez le temps de les lire.</li>
+    </ul>
+  </div>
+
+  <!-- COLOPHON -->
+  <div class="colophon">
+    <p class="disclaimer">Ce guide est un exemple éditorial réalisé à titre de démonstration. Il ne peut être reproduit, republié ou utilisé sans accord écrit préalable de son autrice. Recherche et structuration assistées, rédaction et validation éditoriale humaines.</p>
+    <div class="sources">
+      <h4>// Sources</h4>
+      <ul>
+        <li><a href="https://www.cert.ssi.gouv.fr/uploads/CERTFR-2026-CTI-002.pdf">ANSSI — Panorama de la cybermenace 2025</a><span class="tag">rançongiciels · PME</span></li>
+        <li>Code des assurances — article L.12-10-1 (loi LOPMI)<span class="tag">règle des 72 h</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="in">
+    <div class="b">EO Rédaction web</div>
+    <div class="tag">Rédactrice web SEO · cybersécurité B2B.</div>
+    <nav>
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </nav>
+    <div class="copy">© Emmanuelle Ouine · Tous droits réservés.</div>
+  </div>
+</footer>
+
+<script>
+  // Défilement interne au clic sur les ancres du sommaire.
+  // Évite toute navigation d'URL (utile en aperçu, transparent sur le site hébergé).
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var id = a.getAttribute('href').slice(1);
+        if(!id) return;
+        var el = document.getElementById(id);
+        if(el){
+          e.preventDefault();
+          el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        }
+      });
+    });
+  })();
+</script>
+
+<script>
+  (function() {
+    var content = document.querySelector('.article-content');
+    if (!content) return;
+
+    content.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    content.addEventListener('copy', function(e) {
+      var selection = document.getSelection().toString();
+      if (!selection) return;
+      var source = '\n\n— Source : ' + window.location.href + '\n© Emmanuelle Ouine — Tous droits réservés';
+      e.clipboardData.setData('text/plain', selection + source);
+      e.preventDefault();
+    });
+  })();
+</script>
+
+</body>
+</html>
 
