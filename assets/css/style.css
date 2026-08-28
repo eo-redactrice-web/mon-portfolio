@@ -1679,3 +1679,14 @@ select {
   text-align: left !important;
   text-wrap: normal !important;
 }
+/* =================================================================
+   25. CORRECTIF PONCTUEL — paragraphe EDR avec espacement excessif
+   ================================================================= */
+
+@media (min-width: 720px) {
+  .article-content p.article-no-justify {
+    text-align: left;
+    text-align-last: left;
+    text-wrap: normal;
+  }
+}
