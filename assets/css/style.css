@@ -1583,10 +1583,9 @@ select {
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
-    text-wrap: pretty;
+    text-wrap: wrap;
   }
 }
-
 /* ----- En-têtes du tableau comparatif centrés ----- */
 
 .article-table th {
