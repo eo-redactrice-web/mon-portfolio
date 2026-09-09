@@ -1689,3 +1689,7 @@ select {
     text-wrap: normal;
   }
 }
+.case-simple-desc {
+  text-align: justify;
+  text-justify: inter-word;
+}
