@@ -1693,3 +1693,12 @@ select {
   text-align: justify;
   text-justify: inter-word;
 }
+.part > p,
+.enbref > p,
+.callout > p,
+.struct > p,
+.item > p,
+.retenir li {
+  text-align: justify;
+  text-justify: inter-word;
+}
