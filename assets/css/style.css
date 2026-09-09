@@ -1693,12 +1693,23 @@ select {
   text-align: justify;
   text-justify: inter-word;
 }
-.part > p,
-.enbref > p,
-.callout > p,
-.struct > p,
-.item > p,
-.retenir li {
-  text-align: justify;
-  text-justify: inter-word;
+/* =================================================================
+   26. JUSTIFICATION — GUIDE PRATIQUE ASSURANCE CYBER
+   - Texte courant justifié sur desktop
+   - Dernière ligne alignée à gauche
+   - Césures automatiques pour éviter les grands espaces
+   ================================================================= */
+
+@media (min-width: 720px) {
+  .part p,
+  .part li,
+  .enbref p,
+  .retenir li {
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+  }
 }
