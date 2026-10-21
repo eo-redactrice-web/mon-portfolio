@@ -1100,6 +1100,22 @@ select {
   gap: 0.75rem;
 }
 
+.ressources-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.ressources-grid .case-simple {
+  max-width: none;
+}
+
+@media (min-width: 720px) {
+  .ressources-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
 
 /* =================================================================
    18. PAGE DÉDIÉE — ÉTUDE DE CAS (etude-de-cas.html)
