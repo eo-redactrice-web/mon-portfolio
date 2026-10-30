@@ -100,7 +100,7 @@
   if (form && window.emailjs) {
     emailjs.init({ publicKey: 'Ws612g9URGSJzOqOw' });
 
-    const EMAILJS_SERVICE_ID = 'service_qc7vs2l';
+    const EMAILJS_SERVICE_ID = 'service_j3n6etc';
     const EMAILJS_TEMPLATE_NOTIFICATION = 'template_n9iit7b';
     const EMAILJS_TEMPLATE_AUTOREPLY = 'template_nu39eo9';
 
