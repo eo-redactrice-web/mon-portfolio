@@ -54,6 +54,22 @@
        FEUILLE DE STYLE
        ============================================================= -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Style ciblé du lien éditorial de la section À propos -->
+  <style>
+    #about .col-content p a.about-text-link,
+    #about .col-content p a.about-text-link:visited {
+      color: var(--color-text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(94, 234, 212, 0.4);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    #about .col-content p a.about-text-link:hover,
+    #about .col-content p a.about-text-link:focus-visible {
+      color: var(--color-accent);
+      border-bottom-color: var(--color-accent);
+    }
+  </style>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <!-- =============================================================
@@ -204,7 +220,7 @@ Articles de fond, amélioration de contenus existants, posts LinkedIn issus d’
   Mon parti pris&nbsp;: chaque sujet mérite une recherche dédiée, un échange avec vos équipes lorsque c’est pertinent, et leur validation des informations techniques propres à vos offres avant publication.
 </p>
 <p>
-  Je détaille cette façon de travailler dans ma ressource <a href="ressources/sujet-technique-contenu-cyber-clair.html" style="color: var(--color-text); text-decoration: none; border-bottom: 1px solid rgba(94, 234, 212, 0.4);">Comment passer d’un sujet technique à un contenu cyber clair&nbsp;?</a>
+  Je détaille cette façon de travailler dans ma ressource <a href="ressources/sujet-technique-contenu-cyber-clair.html" class="about-text-link">Comment passer d’un sujet technique à un contenu cyber clair&nbsp;?</a>
 </p>
 <p class="quiet">
   Basée en France. Disponible en télétravail pour des missions ponctuelles ou des collaborations régulières à livrables définis.
@@ -369,15 +385,6 @@ Articles de fond, amélioration de contenus existants, posts LinkedIn issus d’
             <h3 class="article-title">NIS2 et PME : êtes-vous concerné et par où commencer en 2026 ?</h3>
             <p class="article-excerpt">
               Article de démonstration sur la directive NIS2 : comment savoir si votre PME est concernée, ce que change le statut d'entité essentielle ou importante, et par où commencer votre mise en conformité.
-            </p>
-            <span class="article-link">Lire l'article →</span>
-          </a>
-
-          <a href="articles/piliers-cybersecurite.html" class="article-card">
-            <p class="article-meta">Article SEO de fond · Fondamentaux cybersécurité · 7 min</p>
-            <h3 class="article-title">Piliers de la cybersécurité : quels objectifs pour protéger vos données ?</h3>
-            <p class="article-excerpt">
-              Article de démonstration sur les piliers de la cybersécurité : confidentialité, intégrité, disponibilité, traçabilité. Comment s'appuyer sur ces repères pour dialoguer avec un prestataire et choisir ses outils.
             </p>
             <span class="article-link">Lire l'article →</span>
           </a>
